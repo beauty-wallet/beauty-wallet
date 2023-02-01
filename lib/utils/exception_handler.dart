@@ -12,12 +12,13 @@ import 'package:path_provider/path_provider.dart';
 class ExceptionHandler {
   static bool _hasError = false;
 
-  static void _saveException(String? error, StackTrace? stackTrace) async {
+  static void _saveException(String? error, StackTrace? stackTrace, {String? failureClass}) async {
     final appDocDir = await getApplicationDocumentsDirectory();
 
     final file = File('${appDocDir.path}/error.txt');
     final exception = {
       "${DateTime.now()}": {
+        "FailureClass": failureClass ?? 'Not Specified',
         "Error": error,
         "StackTrace": stackTrace.toString(),
       }
@@ -58,12 +59,16 @@ class ExceptionHandler {
     }
   }
 
-  static void onError(FlutterErrorDetails errorDetails) {
+  static void onError<T>(FlutterErrorDetails errorDetails, {T? failureClass}) {
     if (_isErrorFromUser(errorDetails.exception.toString())) {
       return;
     }
 
-    _saveException(errorDetails.exception.toString(), errorDetails.stack);
+    _saveException(
+      errorDetails.exception.toString(),
+      errorDetails.stack,
+      failureClass: failureClass.toString(),
+    );
 
     if (_hasError) {
       return;

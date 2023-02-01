@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:cake_wallet/anypay/any_pay_payment_committed_info.dart';
-import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
 import 'package:cw_core/crypto_currency.dart';
 import 'package:cake_wallet/anypay/any_pay_payment.dart';
@@ -80,7 +79,7 @@ class AnyPayApi {
 		final response = await post(Uri.parse(uri), headers: headers, body: utf8.encode(json.encode(body)));
 		if (response.statusCode == 400) {
 			final decodedBody = json.decode(response.body) as Map<String, dynamic>;
-			throw Exception(decodedBody['message'] as String);
+			throw Exception(decodedBody['message'] as String? ?? 'Error Code 400: Unexpected response');
 		}
 
 		if (response.statusCode != 200) {

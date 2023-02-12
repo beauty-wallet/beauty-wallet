@@ -1,13 +1,17 @@
-# Cake Wallet for Android and iOS
+# Beauty Wallet
 
-## Open Source Multi-Currency Wallet
+## Open Source Multi-Currency Multi-Platform Wallet
+
+# The text below is obsolete and needs to be edited/worked on. //TODO
 
 ## Links
 
-* Website: https://cakewallet.com
-* App Store: https://cakewallet.com/ios
-* Google Play: https://cakewallet.com/gp
-* APK: https://github.com/cake-tech/cake_wallet/releases
+* Website: TBD
+* App Store: TBD
+* Google Play: TBD
+* APK: TBD, https://github.com/beauty-wallet/beauty-wallet/releases
+* Desktop: TBD
+* Web Wallet (non-custodial): TBD
 
 ## Features
 
@@ -54,22 +58,9 @@
 
 * Send, receive, and store XHV and all xAssets like xUSD, xEUR, xAG, etc.
 
-# Monero.com by Cake Wallet for Android and iOS
-
-## Open Source Monero-Only Wallet
-
-*Exchanging to/from other assets is also supported.*
-
-## Links
-
-* Website: https://monero.com
-* App Store: https://apps.apple.com/app/id1601990386
-* Google Play: https://play.google.com/store/apps/details?id=com.monero.app
-* APK: https://github.com/cake-tech/cake_wallet/releases
-
 # Support
 
-We have 24/7 free support. Please contact support@cakewallet.com
+We have 24/7 free support. Please contact TBD
 
 # Build Instructions
 
@@ -113,19 +104,29 @@ Edit the applicable `strings_XX.arb` file in `res/values/` and open a pull reque
 
 `"welcome" : "Welcome to",` -> `"welcome" : "XXX",`
 
-3. For strings where there is a variable, denoted by a $ symbol and braces, such as ${status}, the string in braces should not be translated. For example, when editing line 106:
+3. For strings where there is a variable, denoted by a $ symbol and braces, such as ${status}, the string in braces 
+should not be translated. For example, when editing line 106:
 
 "time" : "${minutes}m ${seconds}s"
 
 The only parts to be translated, if needed, are the values m and s after the variables.
 
-4. Add the language to `lib/entities/language_service.dart` under both `supportedLocales` and `localeCountryCode`. Use the name of the language in the local language and in English in parentheses after for `supportedLocales`. Use the [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) for `localeCountryCode`. You must choose one country, so choose the country with the most native speakers of this language or is otherwise best associated with this language.
+4. Add the language to `lib/entities/language_service.dart` under both `supportedLocales` and `localeCountryCode`.
+Use the name of the language in the local language and in English in parentheses after for `supportedLocales`.
+Use the [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) for `localeCountryCode`.
+You must choose one country, so choose the country with the most native speakers of this language or
+is otherwise best associated with this language.
 
-5. Add a relevant flag to `assets/images/flags/XXXX.png`, replacing XXXX with the 3 digit localeCountryCode. The image must be 42x26 pixels with a 3 pixels of transparent margin on all 4 sides. You can resize the flag with [paint.net](https://www.getpaint.net/) to 36x20 pixels, expand the canvas to 42x26 pixels with the flag anchored in the middle, and then manually delete the 3 pixels on each side to make transparent. Or you can use another program like Photoshop.
+5. Add a relevant flag to `assets/images/flags/XXXX.png`, replacing XXXX with the 3 digit localeCountryCode.
+The image must be 42x26 pixels with a 3 pixels of transparent margin on all 4 sides. You can resize the flag
+with [paint.net](https://www.getpaint.net/) to 36x20 pixels, expand the canvas to 42x26 pixels with the flag
+anchored in the middle, and then manually delete the 3 pixels on each side to make transparent.
+Or you can use another program like GIMP or Photoshop.
 
 ## Add a new fiat currency
 
-1. Check with [Cake Wallet support](https://guides.cakewallet.com) to see if the desired new fiat currency is available through our fiat API. Not all fiat currencies are.
+1. Check with [Cake Wallet support](https://guides.cakewallet.com) to see if the desired new fiat currency is available
+through our fiat API. Not all fiat currencies are.
 
 2. If the currency is associated strongly with a specific issuing country, map the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code with the applicable [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) in `lib/entities/fiat_currency.dart`. If the currency is used in a whole region or organization, then map with a reasonable interpretation of this (eg: eur countryCode for EUR symbol).
 

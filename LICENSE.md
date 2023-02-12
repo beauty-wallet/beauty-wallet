@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2018-2023 Cake Labs LLC
+Copyright (c) 2018-2023 Cake Labs LLC.
+Copyright (c) 2023 Beauty Wallet Team.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

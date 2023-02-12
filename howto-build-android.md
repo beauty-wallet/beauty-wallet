@@ -1,8 +1,8 @@
-# Building CakeWallet for Android
+# Building BeautyWallet for Android
 
 ## Requirements and Setup
 
-The following are the system requirements to build CakeWallet for your Android device.
+The following are the system requirements to build BeautyWallet for your Android device.
 
 ```
 Ubuntu >= 16.04 
@@ -11,7 +11,7 @@ Android NDK 17c
 Flutter 2 or above
 ```
 
-## Building CakeWallet for Android
+## Building BeautyWallet for Android
 
 These steps will help you configure and execute a build of CakeWallet from its source code.
 

@@ -102,7 +102,7 @@ environment variables and configure project files.
 Please pick what app you want to build: cakewallet or monero.com.
 
 ```bash
-source ./app_env.sh <cakewallet OR monero.com>
+source ./app_env.sh `echo -n "<cakewallet OR monero.com>"`
 ```
 (it should be like `source ./app_env.sh cakewallet` or `source ./app_env.sh monero.com`)
 

@@ -13,11 +13,11 @@ Flutter 2 or above
 
 ## Building BeautyWallet for Android
 
-These steps will help you configure and execute a build of CakeWallet from its source code.
+These steps will help you configure and execute a build of BeautyWallet from its source code.
 
 ### 1. Installing Package Dependencies
 
-CakeWallet cannot be built without the following packages installed on your build system.
+BeautyWallet cannot be built without the following packages installed on your build system.
 
 - curl unzip automake build-essential file pkg-config git python libtool libtinfo5 cmake openjdk-8-jre-headless clang
 
@@ -31,7 +31,7 @@ sudo apt-get install -y curl unzip automake build-essential file pkg-config git 
 
 You may download and install the latest version of Android Studio [here](https://developer.android.com/studio#downloads).
 After installing, start Android Studio, and go through the "Setup Wizard." This installs the latest Android SDK,
-Android SDK Command-line Tools, and Android SDK Build-Tools, which are required by CakeWallet.
+Android SDK Command-line Tools, and Android SDK Build-Tools, which are required by BeautyWallet.
 **Be sure you are installing SDK version 28 or later when stepping through the wizard**
 
 ### 3. Installing Flutter
@@ -67,9 +67,9 @@ You will be prompted to create two passwords. First you will be prompted for the
 followed by a "key password" towards the end of the creation process.
 **TAKE NOTE OF THESE PASSWORDS!** You will need them in later steps. 
 
-### 6. Acquiring the CakeWallet Source Code
+### 6. Acquiring the BeautyWallet Source Code
 
-Create the directory that will be use to store the CakeWallet source...
+Create the directory that will be use to store the BeautyWallet source...
 
 ```bash
 mkdir -pv ~/vcs
@@ -94,7 +94,7 @@ cd beauty-wallet/scripts/android/
 ./install_ndk.sh
 ```
 
-### 8. Execute Build & Setup Commands for CakeWallet
+### 8. Execute Build & Setup Commands for BeautyWallet
 
 We need to generate project settings like app name, app icon, package name, etc. For this need to setup
 environment variables and configure project files. 
@@ -118,13 +118,13 @@ Build the Monero libraries and their dependencies:
 ./build_all.sh
 ```
 
-Now the dependencies need to be copied into the CakeWallet project with this command:
+Now the dependencies need to be copied into the BeautyWallet project with this command:
 
 ```bash
 ./copy_monero_deps.sh
 ```
 
-It is now time to change back to the base directory of the CakeWallet source code:
+It is now time to change back to the base directory of the BeautyWallet source code:
 
 ```bash
 cd ../../

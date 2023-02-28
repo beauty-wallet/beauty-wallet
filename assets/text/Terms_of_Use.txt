@@ -1,8 +1,8 @@
-Last Modified: January 11, 2022
+Last Modified: Mar 1, 2023
 
 Acceptance of the Terms of Use
 ==============================
-	These terms of use are entered into by and between You and Cake Labs LLC, a limited liability company formed under the laws of Nevis ("Company," "we," or "us"). The following terms and conditions "Terms of Use") govern your access to and use of the Cake Wallet and Monero.com apps, including any content, functionality, and services offered on or through the Cake Wallet app and the Monero.com app, as applicable (the “App").
+	These terms of use are entered into by and between You and Tranoo Labs, a company formed under the laws of Xxxx ("Company," "we," or "us"). The following terms and conditions "Terms of Use") govern your access to and use of the Cake Wallet and Monero.com apps, including any content, functionality, and services offered on or through the Cake Wallet app and the Monero.com app, as applicable (the “App").
 	Please read the Terms of Use carefully before you start to use the App. By using the App you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, incorporated herein by reference. If you do not wish to agree to these Terms of Use or the Privacy Policy, you must not access or use the App.
 
 Changes to the Terms of Use

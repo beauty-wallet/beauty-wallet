@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:cake_wallet/src/screens/dashboard/widgets/market_place_page.dart';
 import 'package:cw_core/wallet_type.dart';
 import 'package:cake_wallet/generated/i18n.dart';
 import 'package:cake_wallet/routes.dart';
@@ -82,7 +81,7 @@ class DashboardPage extends BasePage {
 
   final DashboardViewModel walletViewModel;
   final WalletAddressListViewModel addressListViewModel;
-  final controller = PageController(initialPage: 1);
+  final controller = PageController(initialPage: 0);
 
   var pages = <Widget>[];
   bool _isEffectsInstalled = false;
@@ -140,25 +139,6 @@ class DashboardPage extends BasePage {
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  if (walletViewModel.hasBuyAction)
-                    ActionButton(
-                      image: Image.asset('assets/images/buy.png',
-                        height: 24,
-                        width: 24,
-                        color: !walletViewModel.isEnabledBuyAction
-                          ? Theme.of(context)
-                              .accentTextTheme!
-                              .headline3!
-                              .backgroundColor!
-                          : Theme.of(context).accentTextTheme!.headline2!.backgroundColor!),
-                      title: S.of(context).buy,
-                      onClick: () async => await _onClickBuyButton(context),
-                      textColor: !walletViewModel.isEnabledBuyAction
-                        ? Theme.of(context)
-                          .accentTextTheme!
-                          .headline3!
-                          .backgroundColor!
-                        : null),  
                   ActionButton(
                       image: receiveImage,
                       title: S.of(context).receive,
@@ -186,25 +166,6 @@ class DashboardPage extends BasePage {
                       image: sendImage,
                       title: S.of(context).send,
                       route: Routes.send),
-                  if (walletViewModel.hasSellAction)
-                    ActionButton(
-                      image: Image.asset('assets/images/sell.png',
-                        height: 24,
-                        width: 24,
-                        color: !walletViewModel.isEnabledSellAction
-                          ? Theme.of(context)
-                              .accentTextTheme!
-                              .headline3!
-                              .backgroundColor!
-                          : Theme.of(context).accentTextTheme!.headline2!.backgroundColor!),
-                      title: S.of(context).sell,
-                      onClick: () async => await _onClickSellButton(context),
-                      textColor: !walletViewModel.isEnabledSellAction
-                        ? Theme.of(context)
-                          .accentTextTheme!
-                          .headline3!
-                          .backgroundColor!
-                        : null),
                 ],
               ),),
             ),),);
@@ -218,7 +179,6 @@ class DashboardPage extends BasePage {
     if (_isEffectsInstalled) {
       return;
     }
-    pages.add(MarketPlacePage(dashboardViewModel: walletViewModel));
     pages.add(balancePage);
     pages.add(TransactionsPage(dashboardViewModel: walletViewModel));
     _isEffectsInstalled = true;

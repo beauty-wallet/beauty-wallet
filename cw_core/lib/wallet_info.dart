@@ -9,7 +9,7 @@ part 'wallet_info.g.dart';
 class WalletInfo extends HiveObject {
   WalletInfo(this.id, this.name, this.type, this.isRecovery, this.restoreHeight,
       this.timestamp, this.dirPath, this.path, this.address, this.yatEid,
-        this.yatLastUsedAddressRaw, this.showIntroCakePayCard)
+        this.yatLastUsedAddressRaw)
       : _yatLastUsedAddressController = StreamController<String>.broadcast();
 
   factory WalletInfo.external(
@@ -22,12 +22,11 @@ class WalletInfo extends HiveObject {
       required String dirPath,
       required String path,
       required String address,
-      bool? showIntroCakePayCard,
       String yatEid ='',
       String yatLastUsedAddressRaw = ''}) {
     return WalletInfo(id, name, type, isRecovery, restoreHeight,
         date.millisecondsSinceEpoch, dirPath, path, address,
-        yatEid, yatLastUsedAddressRaw, showIntroCakePayCard);
+        yatEid, yatLastUsedAddressRaw);
   }
 
   static const typeId = 4;
@@ -60,17 +59,14 @@ class WalletInfo extends HiveObject {
   @HiveField(8, defaultValue: '')
   String address;
 
-  @HiveField(10)
+  @HiveField(9)
   Map<String, String>? addresses;
 
-  @HiveField(11)
+  @HiveField(10)
   String? yatEid;
 
-  @HiveField(12)
+  @HiveField(11)
   String? yatLastUsedAddressRaw;
-
-  @HiveField(13)
-  bool? showIntroCakePayCard;
 
   String get yatLastUsedAddress => yatLastUsedAddressRaw ?? '';
 
@@ -80,13 +76,6 @@ class WalletInfo extends HiveObject {
   }
 
   String get yatEmojiId => yatEid ?? '';
-
-  bool get isShowIntroCakePayCard {
-    if(showIntroCakePayCard == null) {
-      return type != WalletType.haven;
-    }
-    return showIntroCakePayCard!;
-  }
 
   DateTime get date => DateTime.fromMillisecondsSinceEpoch(timestamp);
 

@@ -25,5 +25,5 @@ String get approximatedAppName {
         return 'Haven';
     }
      
-    return 'Cake Wallet';
+    return 'Beauty Wallet';
 }

@@ -1,11 +1,15 @@
 #!/bin/sh
 
 export API=21
-export WORKDIR=/opt/android
-export ANDROID_NDK_ZIP=${WORKDIR}/android-ndk-r17c.zip
-export ANDROID_NDK_ROOT=${WORKDIR}/android-ndk-r17c
+export ANDROID_APILEVEL=$API
+export WORKDIR=/home/user3/vcs/beauty-wallet-umbrella
+export ANDROID_SDK_ROOT=/bsata/SDKS/ANDROID/SDK
+export ANDROID_NDK_ZIP=$ANDROID_SDK_ROOT/../android-ndk-r17c.zip
+#export ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/23.2.8568313
+export ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/android-ndk-r17c
+export ANDROID_NDKS=$ANDROID_SDK_ROOT/ndk/
 export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
-export TOOLCHAIN_DIR="${WORKDIR}/toolchain"
+export TOOLCHAIN_DIR="$WORKDIR/toolchain"
 export TOOLCHAIN_BASE_DIR=$TOOLCHAIN_DIR
-export ORIGINAL_PATH=$PATH
-export THREADS=4
+export ORIGINAL_PATH="$PATH"
+export THREADS=7

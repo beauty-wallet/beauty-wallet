@@ -1,8 +1,8 @@
 #!/bin/bash
 
-WORKDIR=/opt/android
-CW_DIR=${WORKDIR}/cake_wallet
-CW_EXRTERNAL_DIR=${CW_DIR}/cw_shared_external/ios/External/android
+. ./config.sh
+CW_DIR=${WORKDIR}/beauty-wallet
+CW_EXTERNAL_DIR=${CW_DIR}/cw_shared_external/ios/External/android
 CW_HAVEN_EXTERNAL_DIR=${CW_DIR}/cw_haven/ios/External/android
 CW_MONERO_EXTERNAL_DIR=${CW_DIR}/cw_monero/ios/External/android
 for arch in "aarch" "aarch64" "i686" "x86_64"
@@ -22,18 +22,21 @@ case $arch in
 		ABI="x86_64";;
 esac
 
-LIB_DIR=${CW_EXRTERNAL_DIR}/${ABI}/lib
-INCLUDE_DIR=${CW_EXRTERNAL_DIR}/${ABI}/include
+LIB_DIR=${CW_EXTERNAL_DIR}/${ABI}/lib
+INCLUDE_DIR=${CW_EXTERNAL_DIR}/${ABI}/include
 LIBANBOUND_PATH=${PREFIX}/lib/libunbound.a
 
 mkdir -p $LIB_DIR
 mkdir -p $INCLUDE_DIR
+mkdir -p ${LIB_DIR}/monero
+mkdir -p ${LIB_DIR}/haven
 
 cp -r ${PREFIX}/lib/* $LIB_DIR
 cp -r ${PREFIX}/include/* $INCLUDE_DIR
 
 if [ -f "$LIBANBOUND_PATH" ]; then
  cp $LIBANBOUND_PATH ${LIB_DIR}/monero
+ cp $LIBANBOUND_PATH ${LIB_DIR}/haven
 fi
 
 done
@@ -41,5 +44,5 @@ done
 mkdir -p ${CW_HAVEN_EXTERNAL_DIR}/include
 mkdir -p ${CW_MONERO_EXTERNAL_DIR}/include
 
-cp $CW_EXRTERNAL_DIR/x86/include/monero/wallet2_api.h ${CW_MONERO_EXTERNAL_DIR}/include
-cp $CW_EXRTERNAL_DIR/x86/include/haven/wallet2_api.h ${CW_HAVEN_EXTERNAL_DIR}/include
+cp $CW_EXTERNAL_DIR/x86/include/monero/wallet2_api.h ${CW_MONERO_EXTERNAL_DIR}/include
+cp $CW_EXTERNAL_DIR/x86/include/haven/wallet2_api.h ${CW_HAVEN_EXTERNAL_DIR}/include

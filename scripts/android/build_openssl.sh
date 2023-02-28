@@ -15,8 +15,11 @@ rm -rf $ZLIB_DIR
 git clone -b $ZLIB_TAG --depth 1 https://github.com/madler/zlib $ZLIB_DIR
 cd $ZLIB_DIR
 git reset --hard $ZLIB_COMMIT_HASH
-CC=clang CXX=clang++ ./configure --static
-make
+#PATH="${TOOLCHAIN}/bin:${ORIGINAL_PATH}"
+ANDROID_STANDALONE_TOOLCHAIN_PATH="$TOOLCHAIN_BASE_DIR-${arch}"
+PATH="${ANDROID_STANDALONE_TOOLCHAIN_PATH}/bin:${ORIGINAL_PATH}"
+CC=clang CXX=clang++ ./configure --static || exit 1
+make -j${THREADS} || exit 1
 
 curl https://www.openssl.org/source/$OPENSSL_FILENAME -o $OPENSSL_FILE_PATH
 echo $OPENSSL_SHA256 $OPENSSL_FILE_PATH | sha256sum -c - || exit 1
@@ -26,6 +29,8 @@ do
 PREFIX=$WORKDIR/prefix_${arch}
 TOOLCHAIN=${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/linux-x86_64
 PATH="${TOOLCHAIN}/bin:${ORIGINAL_PATH}"
+#ANDROID_STANDALONE_TOOLCHAIN_PATH="$TOOLCHAIN_BASE_DIR-${arch}"
+#PATH="${ANDROID_STANDALONE_TOOLCHAIN_PATH}/bin:${ORIGINAL_PATH}"
 
 case $arch in
 	"aarch")   X_ARCH="android-arm";;
@@ -47,9 +52,9 @@ CC=clang ANDROID_NDK=$TOOLCHAIN \
 	--with-zlib-lib=${PREFIX}/lib \
 	--prefix=${PREFIX} \
 	--openssldir=${PREFIX} \
-	-D__ANDROID_API__=$API 
-make -j$THREADS
-make -j$THREADS install_sw
+	-D__ANDROID_API__=$API || exit 1
+make -j$THREADS || exit 1
+make -j$THREADS install_sw || exit 1
 
 done
 

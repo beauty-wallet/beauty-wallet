@@ -4,3 +4,6 @@
 [submodule ".vendor/inject.dart"]
 	path = .vendor/inject.dart
 	url = https://github.com/google/inject.dart
+[submodule "cw_shared_external/android/boost"]
+	path = cw_shared_external/android/boost
+	url = https://github.com/moritz-wundke/Boost-for-Android.git

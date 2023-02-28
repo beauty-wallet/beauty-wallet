@@ -10,7 +10,7 @@ for arch in "aarch" "aarch64" "i686" "x86_64"
 do
 PREFIX=$WORKDIR/prefix_${arch}
 TOOLCHAIN=${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/linux-x86_64
-PATH="${TOOLCHAIN_BASE_DIR}_${arch}/bin:${ORIGINAL_PATH}"
+PATH="${TOOLCHAIN_BASE_DIR}-${arch}/bin:${ORIGINAL_PATH}"
 
 cd $WORKDIR
 rm -rf $EXPAT_SRC_DIR
@@ -25,10 +25,10 @@ case $arch in
 	*)	       HOST="${arch}-linux-android";;
 esac 
 
-./buildconf.sh
-CC=clang CXX=clang++ ./configure --enable-static --disable-shared --prefix=${PREFIX} --host=${HOST}
-make -j$THREADS
-make -j$THREADS install
+./buildconf.sh || exit 1
+CC=clang CXX=clang++ ./configure --enable-static --disable-shared --prefix=${PREFIX} --host=${HOST} || exit 1
+make -j$THREADS || exit 1
+make -j$THREADS install || exit 1
 done
 
 UNBOUND_VERSION=release-1.16.2
@@ -41,11 +41,11 @@ PREFIX=$WORKDIR/prefix_${arch}
 TOOLCHAIN=${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/linux-x86_64
 
 case $arch in
-	"aarch")   TOOLCHAIN_BIN_PATH=${TOOLCHAIN_BASE_DIR}_${arch}/arm-linux-androideabi/bin;;
-	*)	       TOOLCHAIN_BIN_PATH=${TOOLCHAIN_BASE_DIR}_${arch}/${arch}-linux-android/bin;;
+	"aarch")   TOOLCHAIN_BIN_PATH=${TOOLCHAIN_BASE_DIR}-${arch}/arm-linux-androideabi/bin;;
+	*)	       TOOLCHAIN_BIN_PATH=${TOOLCHAIN_BASE_DIR}-${arch}/${arch}-linux-android/bin;;
 esac 
 
-PATH="${TOOLCHAIN_BIN_PATH}:${TOOLCHAIN_BASE_DIR}_${arch}/bin:${ORIGINAL_PATH}"
+PATH="${TOOLCHAIN_BIN_PATH}:${TOOLCHAIN_BASE_DIR}-${arch}/bin:${ORIGINAL_PATH}"
 echo $PATH
 cd $WORKDIR
 rm -rf $UNBOUND_SRC_DIR
@@ -59,7 +59,7 @@ case $arch in
 	*)	       HOST="${arch}-linux-android";;
 esac
 
-CC=clang CXX=clang++ ./configure --prefix=${PREFIX} --host=${HOST} --enable-static --disable-shared --disable-flto --with-ssl=${PREFIX} --with-libexpat=${PREFIX}
-make -j$THREADS
-make -j$THREADS install
+CC=clang CXX=clang++ ./configure --prefix=${PREFIX} --host=${HOST} --enable-static --disable-shared --disable-flto --with-ssl=${PREFIX} --with-libexpat=${PREFIX} || exit 1
+make -j$THREADS || exit 1
+make -j$THREADS install || exit 1
 done

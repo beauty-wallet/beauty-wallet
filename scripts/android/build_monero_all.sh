@@ -1,9 +1,9 @@
 #!/bin/bash
 
-./build_iconv.sh
-./build_boost.sh
-./build_openssl.sh
-./build_sodium.sh
-./build_unbound.sh
-./build_zmq.sh
-./build_monero.sh
+./build_iconv.sh || exit 1
+./build_boost.sh || exit 1
+./build_openssl.sh || exit 1
+./build_sodium.sh || exit 1
+./build_unbound.sh || exit 1
+./build_zmq.sh || exit 1
+./build_monero.sh || exit 1

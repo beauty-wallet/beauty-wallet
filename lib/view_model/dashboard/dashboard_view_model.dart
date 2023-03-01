@@ -33,6 +33,7 @@ import 'package:cake_wallet/store/dashboard/transaction_filter_store.dart';
 import 'package:cake_wallet/view_model/dashboard/formatted_item_list.dart';
 import 'package:cake_wallet/monero/monero.dart';
 
+import 'package:cake_wallet/view_model/node_list/node_list_view_model.dart';
 part 'dashboard_view_model.g.dart';
 
 class DashboardViewModel = DashboardViewModelBase with _$DashboardViewModel;
@@ -163,6 +164,7 @@ abstract class DashboardViewModelBase with Store {
 
           return true;
     });
+
   }
 
   @observable
@@ -391,5 +393,11 @@ abstract class DashboardViewModelBase with Store {
       && wallet.type != WalletType.monero
       && wallet.type != WalletType.litecoin;
     hasSellAction = !isMoneroOnly && !isHaven;
+  }
+
+  void useMainnet(NodeListViewModel nodeListViewModel) async {//TODO
+  }
+
+  void useTestnet(NodeListViewModel nodeListViewModel) async {//TODO
   }
 }

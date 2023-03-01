@@ -1,4 +1,5 @@
 import 'package:cake_wallet/src/screens/settings/widgets/settings_cell_with_arrow.dart';
+import 'package:cake_wallet/themes/theme_base.dart';
 import 'package:cake_wallet/utils/show_pop_up.dart';
 import 'package:cake_wallet/view_model/dashboard/dashboard_view_model.dart';
 import 'package:cw_core/node.dart';
@@ -42,6 +43,43 @@ class ConnectionSyncPage extends BasePage {
               handler: (context) => Navigator.of(context).pushNamed(Routes.rescan),
             ),
           StandardListSeparator(padding: EdgeInsets.symmetric(horizontal: 24)),
+          SettingsCellWithArrow(
+              title: S.current.network,
+              handler: (context) async => await showDialog<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return SimpleDialog(
+                    title: Row (
+                        children: [
+                          Icon(Icons.code, color:Colors.blue),
+                          SizedBox(width:5, height:5),
+                          Text(S.of(context).choose_network),
+                        ]
+                    ),
+                    titleTextStyle: TextStyle(
+                      color: Theme.of(context).textTheme.headline3?.color,
+                    ),
+                    children: <Widget>[
+                      SimpleDialogOption(
+                        onPressed: () async {
+                          dashboardViewModel.useMainnet(nodeListViewModel);
+                          Navigator.of(context).pop();
+                          },
+                        child: Text(S.of(context).mainnet),
+                      ),
+                      SimpleDialogOption(
+                        onPressed: () async {
+                          dashboardViewModel.useTestnet(nodeListViewModel);
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(S.of(context).testnet),
+                      ),
+                    ],
+                  );
+                },
+              )
+          ),
+          StandardListSeparator(padding: EdgeInsets.symmetric(horizontal: 24)),
           NodeHeaderListRow(
             title: S.of(context).add_new_node,
             onTap: (_) async => await Navigator.of(context).pushNamed(Routes.newNode),
@@ -62,7 +100,7 @@ class ConnectionSyncPage extends BasePage {
                     final node = nodeListViewModel.nodes[index];
                     final isSelected = node.keyIndex == nodeListViewModel.currentNode.keyIndex;
                     final nodeListRow = NodeListRow(
-                      title: node.uriRaw,
+                      title: "${node.uriRaw}"+(isSelected?" (${S.of(context).selected})":""),
                       isSelected: isSelected,
                       isAlive: node.requestNode(),
                       onTap: (_) async {

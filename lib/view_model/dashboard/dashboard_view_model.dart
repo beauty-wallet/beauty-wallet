@@ -294,8 +294,10 @@ abstract class DashboardViewModelBase with Store {
   @observable
   bool isOutdatedElectrumWallet;
 
+  NetworkKind currentNetworkKind = NetworkKind.mainnet;
+
   Future<void> reconnect() async {
-    final node = appStore.settingsStore.getCurrentNode(wallet.type);
+    final node = appStore.settingsStore.getCurrentNode(wallet.type, currentNetworkKind);
     await wallet.connectToNode(node: node);
   }
 
@@ -395,9 +397,15 @@ abstract class DashboardViewModelBase with Store {
     hasSellAction = !isMoneroOnly && !isHaven;
   }
 
-  void useMainnet(NodeListViewModel nodeListViewModel) async {//TODO
+  void useMainnet() async {
+    currentNetworkKind = NetworkKind.mainnet;
   }
 
-  void useTestnet(NodeListViewModel nodeListViewModel) async {//TODO
+  void useTestnet() async {
+    currentNetworkKind = NetworkKind.testnet;
+  }
+
+  NetworkKind currentNetwork() {
+    return currentNetworkKind;
   }
 }

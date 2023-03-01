@@ -168,7 +168,8 @@ final getIt = GetIt.instance;
 
 var _isSetupFinished = false;
 late Box<WalletInfo> _walletInfoSource;
-late Box<Node> _nodeSource;
+late Box<Node> _nodeSourceMainnet;
+late Box<Node> _nodeSourceTestnet;
 late Box<Contact> _contactSource;
 late Box<Trade> _tradesSource;
 late Box<Template> _templates;
@@ -179,7 +180,8 @@ late Box<UnspentCoinsInfo>? _unspentCoinsInfoSource;
 
 Future setup(
     {required Box<WalletInfo> walletInfoSource,
-    required Box<Node> nodeSource,
+      required Box<Node> nodeSourceMainnet,
+      required Box<Node> nodeSourceTestnet,
     required Box<Contact> contactSource,
     required Box<Trade> tradesSource,
     required Box<Template> templates,
@@ -188,7 +190,8 @@ Future setup(
     required Box<Order> ordersSource,
     Box<UnspentCoinsInfo>? unspentCoinsInfoSource}) async {
   _walletInfoSource = walletInfoSource;
-  _nodeSource = nodeSource;
+  _nodeSourceMainnet = nodeSourceMainnet;
+  _nodeSourceTestnet = nodeSourceTestnet;
   _contactSource = contactSource;
   _tradesSource = tradesSource;
   _templates = templates;
@@ -207,13 +210,16 @@ Future setup(
       (secrets.wyreAccountId?.isNotEmpty ?? false);
 
   final settingsStore = await SettingsStoreBase.load(
-      nodeSource: _nodeSource, isBitcoinBuyEnabled: isBitcoinBuyEnabled);
+      nodeSourceMainnet: _nodeSourceMainnet, nodeSourceTestnet: _nodeSourceTestnet, isBitcoinBuyEnabled: isBitcoinBuyEnabled);
 
   if (_isSetupFinished) {
     return;
   }
 
-  getIt.registerFactory<Box<Node>>(() => _nodeSource);
+  getIt.registerFactoryParam<Box<Node>, NetworkKind, void>(
+          (NetworkKind networkKind, _) =>
+          ((networkKind==NetworkKind.mainnet)?_nodeSourceMainnet:_nodeSourceTestnet)
+  );
 
   getIt.registerSingleton<FlutterSecureStorage>(FlutterSecureStorage());
   getIt.registerSingleton(AuthenticationStore());
@@ -496,11 +502,20 @@ Future setup(
 
   getIt.registerFactory(() {
     final appStore = getIt.get<AppStore>();
-    return NodeListViewModel(
-        _nodeSource, appStore.wallet!, appStore.settingsStore);
+    return NodeListViewModelMainnet(
+        NetworkKind.mainnet,
+        _nodeSourceMainnet, _nodeSourceTestnet, appStore.wallet!, appStore.settingsStore);
   });
 
-  getIt.registerFactory(() => ConnectionSyncPage(getIt.get<NodeListViewModel>(), getIt.get<DashboardViewModel>()));
+  getIt.registerFactory(() {
+    final appStore = getIt.get<AppStore>();
+    return NodeListViewModelTestnet(
+        NetworkKind.testnet,
+        _nodeSourceMainnet, _nodeSourceTestnet, appStore.wallet!, appStore.settingsStore);
+  });
+
+  getIt.registerFactory(() => ConnectionSyncPage(getIt.get<NodeListViewModelMainnet>(),
+      getIt.get<NodeListViewModelTestnet>(), getIt.get<DashboardViewModel>()));
 
   getIt.registerFactory(() => SecurityBackupPage(getIt.get<SecuritySettingsViewModel>()));
 
@@ -512,13 +527,14 @@ Future setup(
 
   getIt.registerFactoryParam<NodeCreateOrEditViewModel, WalletType?, void>(
     (WalletType? type, _) => NodeCreateOrEditViewModel(
-        _nodeSource,
+        _nodeSourceMainnet,
+        _nodeSourceTestnet,
         type ?? getIt.get<AppStore>().wallet!.type,
         getIt.get<SettingsStore>(),
     ));
 
-  getIt.registerFactory(
-      () => NodeCreateOrEditPage(getIt.get<NodeCreateOrEditViewModel>()));
+  getIt.registerFactoryParam<NodeCreateOrEditPage, NetworkKind, void>(
+      (NetworkKind networkKind, _) => NodeCreateOrEditPage(getIt.get<NodeCreateOrEditViewModel>(), networkKind));
 
   getIt.registerFactory(() => OnRamperPage(
     settingsStore: getIt.get<AppStore>().settingsStore,

@@ -26,6 +26,7 @@ import 'package:cake_wallet/src/screens/support/support_page.dart';
 import 'package:cake_wallet/src/screens/unspent_coins/unspent_coins_details_page.dart';
 import 'package:cake_wallet/src/screens/unspent_coins/unspent_coins_list_page.dart';
 import 'package:cake_wallet/utils/payment_request.dart';
+import 'package:cake_wallet/view_model/dashboard/dashboard_view_model.dart';
 import 'package:cake_wallet/view_model/monero_account_list/account_list_item.dart';
 import 'package:cake_wallet/view_model/node_list/node_create_or_edit_view_model.dart';
 import 'package:cake_wallet/view_model/advanced_privacy_settings_view_model.dart';
@@ -507,6 +508,7 @@ Route<dynamic> createRoute(RouteSettings settings) {
 
       return CupertinoPageRoute<void>(
           builder: (_) => AdvancedPrivacySettingsPage(
+            getIt.get<DashboardViewModel>(param1: type),
             getIt.get<AdvancedPrivacySettingsViewModel>(param1: type),
             getIt.get<NodeCreateOrEditViewModel>(param1: type),
           ));

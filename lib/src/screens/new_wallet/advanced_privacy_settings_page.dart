@@ -1,5 +1,6 @@
 import 'package:cake_wallet/src/screens/nodes/widgets/node_form.dart';
 import 'package:cake_wallet/src/screens/settings/widgets/settings_switcher_cell.dart';
+import 'package:cake_wallet/view_model/dashboard/dashboard_view_model.dart';
 import 'package:cake_wallet/view_model/node_list/node_create_or_edit_view_model.dart';
 import 'package:cake_wallet/view_model/advanced_privacy_settings_view_model.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -10,25 +11,27 @@ import 'package:cake_wallet/src/widgets/primary_button.dart';
 import 'package:cake_wallet/src/widgets/scollable_with_bottom_section.dart';
 
 class AdvancedPrivacySettingsPage extends BasePage {
-  AdvancedPrivacySettingsPage(this.advancedPrivacySettingsViewModel, this.nodeViewModel);
+  AdvancedPrivacySettingsPage(this.dashboardViewModel, this.advancedPrivacySettingsViewModel, this.nodeViewModel);
 
   final AdvancedPrivacySettingsViewModel advancedPrivacySettingsViewModel;
   final NodeCreateOrEditViewModel nodeViewModel;
+  final DashboardViewModel dashboardViewModel;
 
   @override
   String get title => S.current.privacy_settings;
 
   @override
   Widget body(BuildContext context) =>
-      AdvancedPrivacySettingsBody(advancedPrivacySettingsViewModel, nodeViewModel);
+      AdvancedPrivacySettingsBody(dashboardViewModel, advancedPrivacySettingsViewModel, nodeViewModel);
 }
 
 class AdvancedPrivacySettingsBody extends StatefulWidget {
-  const AdvancedPrivacySettingsBody(this.privacySettingsViewModel, this.nodeViewModel, {Key? key})
+  const AdvancedPrivacySettingsBody(this.dashboardViewModel, this.privacySettingsViewModel, this.nodeViewModel, {Key? key})
       : super(key: key);
 
   final AdvancedPrivacySettingsViewModel privacySettingsViewModel;
   final NodeCreateOrEditViewModel nodeViewModel;
+  final DashboardViewModel dashboardViewModel;
 
   @override
   _AdvancedPrivacySettingsBodyState createState() => _AdvancedPrivacySettingsBodyState();
@@ -83,7 +86,7 @@ class _AdvancedPrivacySettingsBodyState extends State<AdvancedPrivacySettingsBod
                     return;
                   }
 
-                  widget.nodeViewModel.save(saveAsCurrent: true);
+                  widget.nodeViewModel.save(networkKind: this.widget.dashboardViewModel.currentNetwork(), saveAsCurrent: true);
                 }
 
                 Navigator.pop(context);

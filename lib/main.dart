@@ -108,7 +108,8 @@ Future<void> main() async {
     final ordersBoxKey = await getEncryptionKey(
         secureStorage: secureStorage, forKey: Order.boxKey);
     final contacts = await Hive.openBox<Contact>(Contact.boxName);
-    final nodes = await Hive.openBox<Node>(Node.boxName);
+    final nodesMainnet = await Hive.openBox<Node>(Node.boxNameMainnet);
+    final nodesTestnet = await Hive.openBox<Node>(Node.boxNameTestnet);
     final transactionDescriptions = await Hive.openBox<TransactionDescription>(
         TransactionDescription.boxName,
         encryptionKey: transactionDescriptionsBoxKey);
@@ -128,7 +129,8 @@ Future<void> main() async {
     
     await initialSetup(
         sharedPreferences: await SharedPreferences.getInstance(),
-        nodes: nodes,
+        nodesMainnet: nodesMainnet,
+        nodesTestnet: nodesTestnet,
         walletInfoSource: walletInfoSource,
         contactSource: contacts,
         tradesSource: trades,
@@ -148,7 +150,8 @@ Future<void> main() async {
 
 Future<void> initialSetup(
     {required SharedPreferences sharedPreferences,
-    required Box<Node> nodes,
+      required Box<Node> nodesMainnet,
+      required Box<Node> nodesTestnet,
     required Box<WalletInfo> walletInfoSource,
     required Box<Contact> contactSource,
     required Box<Trade> tradesSource,
@@ -168,10 +171,13 @@ Future<void> initialSetup(
       walletInfoSource: walletInfoSource,
       contactSource: contactSource,
       tradeSource: tradesSource,
-      nodes: nodes);
+    nodesMainnet: nodesMainnet,
+    nodesTestnet: nodesTestnet,
+  );
   await setup(
       walletInfoSource: walletInfoSource,
-      nodeSource: nodes,
+    nodeSourceMainnet: nodesMainnet,
+    nodeSourceTestnet: nodesTestnet,
       contactSource: contactSource,
       tradesSource: tradesSource,
       templates: templates,

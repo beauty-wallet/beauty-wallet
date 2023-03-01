@@ -1,6 +1,7 @@
 import 'package:cake_wallet/bitcoin/bitcoin.dart';
 import 'package:cake_wallet/entities/pin_code_required_duration.dart';
 import 'package:cake_wallet/entities/preferences_key.dart';
+import 'package:cake_wallet/view_model/node_list/node_list_view_model.dart';
 import 'package:cw_core/transaction_priority.dart';
 import 'package:cake_wallet/themes/theme_base.dart';
 import 'package:cake_wallet/themes/theme_list.dart';
@@ -37,7 +38,8 @@ abstract class SettingsStoreBase with Store {
       required String initialLanguageCode,
       // required String initialCurrentLocale,
       required this.appVersion,
-      required Map<WalletType, Node> nodes,
+        required Map<WalletType, Node> nodesMainnet,
+        required Map<WalletType, Node> nodesTestnet,
       required this.shouldShowYatPopup,
       required this.isBitcoinBuyEnabled,
       required this.actionlistDisplayMode,
@@ -46,7 +48,9 @@ abstract class SettingsStoreBase with Store {
       TransactionPriority? initialMoneroTransactionPriority,
       TransactionPriority? initialHavenTransactionPriority,
       TransactionPriority? initialLitecoinTransactionPriority})
-  : nodes = ObservableMap<WalletType, Node>.of(nodes),
+  :
+        nodesMainnet = ObservableMap<WalletType, Node>.of(nodesMainnet),
+        nodesTestnet = ObservableMap<WalletType, Node>.of(nodesTestnet),
     _sharedPreferences = sharedPreferences,
     fiatCurrency = initialFiatCurrency,
     balanceDisplayMode = initialBalanceDisplayMode,
@@ -158,12 +162,19 @@ abstract class SettingsStoreBase with Store {
             PreferencesKey.disableExchangeKey, disableExchange));
 
     this
-        .nodes
+        .nodesMainnet
         .observe((change) {
-            if (change.newValue != null && change.key != null) {
-                _saveCurrentNode(change.newValue!, change.key!);
-            }
-        });
+      if (change.newValue != null && change.key != null) {
+        _saveCurrentNode(change.newValue!, change.key!, NetworkKind.mainnet);
+      }
+    });
+    this
+        .nodesTestnet
+        .observe((change) {
+      if (change.newValue != null && change.key != null) {
+        _saveCurrentNode(change.newValue!, change.key!, NetworkKind.testnet);
+      }
+    });
   }
 
   static const defaultPinLength = 4;
@@ -216,10 +227,11 @@ abstract class SettingsStoreBase with Store {
 
   SharedPreferences _sharedPreferences;
 
-  ObservableMap<WalletType, Node> nodes;
+  ObservableMap<WalletType, Node> nodesMainnet;
+  ObservableMap<WalletType, Node> nodesTestnet;
 
-  Node getCurrentNode(WalletType walletType) {
-    final node = nodes[walletType];
+  Node getCurrentNode(WalletType walletType, NetworkKind network) {
+    final node = network==NetworkKind.mainnet?nodesMainnet[walletType]:nodesTestnet[walletType];
 
     if (node == null) {
         throw Exception('No node found for wallet type: ${walletType.toString()}');
@@ -237,11 +249,13 @@ abstract class SettingsStoreBase with Store {
     _sharedPreferences.setBool(PreferencesKey.shouldShowReceiveWarning, value);
 
   static Future<SettingsStore> load(
-      {required Box<Node> nodeSource,
-      required bool isBitcoinBuyEnabled,
-      FiatCurrency initialFiatCurrency = FiatCurrency.usd,
-      BalanceDisplayMode initialBalanceDisplayMode =
-          BalanceDisplayMode.availableBalance}) async {
+      {
+        required Box<Node> nodeSourceMainnet,
+        required Box<Node> nodeSourceTestnet,
+        required bool isBitcoinBuyEnabled,
+        FiatCurrency initialFiatCurrency = FiatCurrency.usd,
+        BalanceDisplayMode initialBalanceDisplayMode =
+            BalanceDisplayMode.availableBalance}) async {
 
     final sharedPreferences = await getIt.getAsync<SharedPreferences>();
     final currentFiatCurrency = FiatCurrency.deserialize(raw:
@@ -318,35 +332,60 @@ abstract class SettingsStoreBase with Store {
         .getInt(PreferencesKey.currentLitecoinElectrumSererIdKey);
     final havenNodeId = sharedPreferences
         .getInt(PreferencesKey.currentHavenNodeIdKey);
-    final moneroNode = nodeSource.get(nodeId);
-    final bitcoinElectrumServer = nodeSource.get(bitcoinElectrumServerId);
-    final litecoinElectrumServer = nodeSource.get(litecoinElectrumServerId);
-    final havenNode = nodeSource.get(havenNodeId);
+    final nodeIdTestnet = sharedPreferences.getInt(PreferencesKey.currentNodeIdTestnetKey);
+    final bitcoinElectrumServerIdTestnet = sharedPreferences
+        .getInt(PreferencesKey.currentBitcoinElectrumSererIdTestnetKey);
+    final litecoinElectrumServerTestnetId = sharedPreferences
+        .getInt(PreferencesKey.currentLitecoinElectrumSererIdTestnetKey);
+    final havenNodeIdTestnet = sharedPreferences
+        .getInt(PreferencesKey.currentHavenNodeIdTestnetKey);
+    final moneroNode = nodeSourceMainnet.get(nodeId);
+    final moneroNodeTestnet = nodeSourceTestnet.get(nodeIdTestnet);
+    final bitcoinElectrumServer = nodeSourceMainnet.get(bitcoinElectrumServerId);
+    final bitcoinElectrumServerTestnet = nodeSourceTestnet.get(bitcoinElectrumServerIdTestnet);
+    final litecoinElectrumServer = nodeSourceMainnet.get(litecoinElectrumServerId);
+    final havenNode = nodeSourceMainnet.get(havenNodeId);
+    final litecoinElectrumServerTestnet = nodeSourceTestnet.get(litecoinElectrumServerTestnetId);
+    final havenNodeTestnet = nodeSourceTestnet.get(havenNodeIdTestnet);
     final packageInfo = await PackageInfo.fromPlatform();
     final shouldShowYatPopup =
         sharedPreferences.getBool(PreferencesKey.shouldShowYatPopup) ?? true;
 
-    final nodes = <WalletType, Node>{};
+    final nodesMainnet = <WalletType, Node>{};
+    final nodesTestnet = <WalletType, Node>{};
 
     if (moneroNode != null) {
-        nodes[WalletType.monero] = moneroNode;
+      nodesMainnet[WalletType.monero] = moneroNode;
+    }
+    if (moneroNodeTestnet != null) {
+      nodesTestnet[WalletType.monero] = moneroNodeTestnet;
     }
 
     if (bitcoinElectrumServer != null) {
-        nodes[WalletType.bitcoin] = bitcoinElectrumServer;
+      nodesMainnet[WalletType.bitcoin] = bitcoinElectrumServer;
+    }
+    if (bitcoinElectrumServerTestnet != null) {
+      nodesTestnet[WalletType.bitcoin] = bitcoinElectrumServerTestnet;
     }
 
     if (litecoinElectrumServer != null) {
-        nodes[WalletType.litecoin] = litecoinElectrumServer;
+      nodesMainnet[WalletType.litecoin] = litecoinElectrumServer;
+    }
+    if (litecoinElectrumServerTestnet != null) {
+      nodesTestnet[WalletType.litecoin] = litecoinElectrumServerTestnet;
     }
 
     if (havenNode != null) {
-        nodes[WalletType.haven] = havenNode;
+      nodesMainnet[WalletType.haven] = havenNode;
+    }
+    if (havenNodeTestnet != null) {
+      nodesTestnet[WalletType.haven] = havenNodeTestnet;
     }
 
     return SettingsStore(
         sharedPreferences: sharedPreferences,
-        nodes: nodes,
+        nodesMainnet: nodesMainnet,
+        nodesTestnet: nodesTestnet,
         appVersion: packageInfo.version,
         isBitcoinBuyEnabled: isBitcoinBuyEnabled,
         initialFiatCurrency: currentFiatCurrency,
@@ -367,7 +406,7 @@ abstract class SettingsStoreBase with Store {
         shouldShowYatPopup: shouldShowYatPopup);
   }
 
-  Future<void> reload({required Box<Node> nodeSource}) async {
+  Future<void> reload({required Box<Node> nodeSourceMainnet, required Box<Node> nodeSourceTestnet}) async {
 
     final sharedPreferences = await getIt.getAsync<SharedPreferences>();
 
@@ -429,50 +468,87 @@ abstract class SettingsStoreBase with Store {
         .getInt(PreferencesKey.currentLitecoinElectrumSererIdKey);
     final havenNodeId = sharedPreferences
         .getInt(PreferencesKey.currentHavenNodeIdKey);
-    final moneroNode = nodeSource.get(nodeId);
-    final bitcoinElectrumServer = nodeSource.get(bitcoinElectrumServerId);
-    final litecoinElectrumServer = nodeSource.get(litecoinElectrumServerId);
-    final havenNode = nodeSource.get(havenNodeId);
+    final nodeIdT = sharedPreferences.getInt(PreferencesKey.currentNodeIdTestnetKey);
+    final bitcoinElectrumServerIdT = sharedPreferences
+        .getInt(PreferencesKey.currentBitcoinElectrumSererIdTestnetKey);
+    final litecoinElectrumServerIdT = sharedPreferences
+        .getInt(PreferencesKey.currentLitecoinElectrumSererIdTestnetKey);
+    final havenNodeIdT = sharedPreferences
+        .getInt(PreferencesKey.currentHavenNodeIdTestnetKey);
+    final moneroNode = nodeSourceMainnet.get(nodeId);
+    final bitcoinElectrumServer = nodeSourceMainnet.get(bitcoinElectrumServerId);
+    final litecoinElectrumServer = nodeSourceMainnet.get(litecoinElectrumServerId);
+    final havenNode = nodeSourceMainnet.get(havenNodeId);
+    final moneroNodeT = nodeSourceTestnet.get(nodeIdT);
+    final bitcoinElectrumServerT = nodeSourceTestnet.get(bitcoinElectrumServerIdT);
+    final litecoinElectrumServerT = nodeSourceTestnet.get(litecoinElectrumServerIdT);
+    final havenNodeT = nodeSourceTestnet.get(havenNodeIdT);
 
     if (moneroNode != null) {
-      nodes[WalletType.monero] = moneroNode;
+      nodesMainnet[WalletType.monero] = moneroNode;
     }
-
     if (bitcoinElectrumServer != null) {
-      nodes[WalletType.bitcoin] = bitcoinElectrumServer;
+      nodesMainnet[WalletType.bitcoin] = bitcoinElectrumServer;
     }
-
     if (litecoinElectrumServer != null) {
-      nodes[WalletType.litecoin] = litecoinElectrumServer;
+      nodesMainnet[WalletType.litecoin] = litecoinElectrumServer;
     }
-
     if (havenNode != null) {
-      nodes[WalletType.haven] = havenNode;
+      nodesMainnet[WalletType.haven] = havenNode;
+    }
+    if (moneroNodeT != null) {
+      nodesTestnet[WalletType.monero] = moneroNodeT;
+    }
+    if (bitcoinElectrumServerT != null) {
+      nodesTestnet[WalletType.bitcoin] = bitcoinElectrumServerT;
+    }
+    if (litecoinElectrumServerT != null) {
+      nodesTestnet[WalletType.litecoin] = litecoinElectrumServerT;
+    }
+    if (havenNodeT != null) {
+      nodesTestnet[WalletType.haven] = havenNodeT;
     }
   }
 
-  Future<void> _saveCurrentNode(Node node, WalletType walletType) async {
+  Future<void> _saveCurrentNode(Node node, WalletType walletType, NetworkKind network) async {
     switch (walletType) {
       case WalletType.bitcoin:
-        await _sharedPreferences.setInt(
-            PreferencesKey.currentBitcoinElectrumSererIdKey, node.key as int);
+        if(network==NetworkKind.mainnet)
+          await _sharedPreferences.setInt(PreferencesKey.currentBitcoinElectrumSererIdKey, node.key as int);
+        else
+          await _sharedPreferences.setInt(PreferencesKey.currentBitcoinElectrumSererIdTestnetKey, node.key as int);
         break;
       case WalletType.litecoin:
-        await _sharedPreferences.setInt(
+        if(network==NetworkKind.mainnet)
+          await _sharedPreferences.setInt(
             PreferencesKey.currentLitecoinElectrumSererIdKey, node.key as int);
+        else
+          await _sharedPreferences.setInt(
+              PreferencesKey.currentLitecoinElectrumSererIdTestnetKey, node.key as int);
         break;
       case WalletType.monero:
-        await _sharedPreferences.setInt(
+        if(network==NetworkKind.mainnet)
+          await _sharedPreferences.setInt(
             PreferencesKey.currentNodeIdKey, node.key as int);
+        else
+          await _sharedPreferences.setInt(
+              PreferencesKey.currentNodeIdTestnetKey, node.key as int);
         break;
       case WalletType.haven:
-        await _sharedPreferences.setInt(
+        if(network==NetworkKind.mainnet)
+          await _sharedPreferences.setInt(
             PreferencesKey.currentHavenNodeIdKey, node.key as int);
+        else
+          await _sharedPreferences.setInt(
+              PreferencesKey.currentHavenNodeIdTestnetKey, node.key as int);
         break;
       default:
         break;
     }
 
-    nodes[walletType] = node;
+    if(network==NetworkKind.mainnet)
+      nodesMainnet[walletType] = node;
+    else
+      nodesTestnet[walletType] = node;
   }
 }

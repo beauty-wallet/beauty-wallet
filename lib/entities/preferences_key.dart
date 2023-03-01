@@ -5,6 +5,10 @@ class PreferencesKey {
   static const currentBitcoinElectrumSererIdKey = 'current_node_id_btc';
   static const currentLitecoinElectrumSererIdKey = 'current_node_id_ltc';
   static const currentHavenNodeIdKey = 'current_node_id_xhv';
+  static const currentNodeIdTestnetKey = 'current_node_id_testnet';
+  static const currentBitcoinElectrumSererIdTestnetKey = 'current_node_id_btc_testnet';
+  static const currentLitecoinElectrumSererIdTestnetKey = 'current_node_id_ltc_testnet';
+  static const currentHavenNodeIdTestnetKey = 'current_node_id_xhv_testnet';
   static const currentFiatCurrencyKey = 'current_fiat_currency';
   static const currentTransactionPriorityKeyLegacy = 'current_fee_priority';
   static const currentBalanceDisplayModeKey = 'current_balance_display_mode';

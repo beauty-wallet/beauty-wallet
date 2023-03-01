@@ -17,12 +17,13 @@ import 'package:cake_wallet/view_model/node_list/node_list_view_model.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ConnectionSyncPage extends BasePage {
-  ConnectionSyncPage(this.nodeListViewModel, this.dashboardViewModel);
+  ConnectionSyncPage(this.nodeListViewModelMainnet, this.nodeListViewModelTestnet, this.dashboardViewModel);
 
   @override
   String get title => S.current.connection_sync;
 
-  final NodeListViewModel nodeListViewModel;
+  final NodeListViewModelMainnet nodeListViewModelMainnet;
+  final NodeListViewModelTestnet nodeListViewModelTestnet;
   final DashboardViewModel dashboardViewModel;
 
   @override
@@ -62,14 +63,14 @@ class ConnectionSyncPage extends BasePage {
                     children: <Widget>[
                       SimpleDialogOption(
                         onPressed: () async {
-                          dashboardViewModel.useMainnet(nodeListViewModel);
+                          dashboardViewModel.useMainnet();
                           Navigator.of(context).pop();
                           },
                         child: Text(S.of(context).mainnet),
                       ),
                       SimpleDialogOption(
                         onPressed: () async {
-                          dashboardViewModel.useTestnet(nodeListViewModel);
+                          dashboardViewModel.useTestnet();
                           Navigator.of(context).pop();
                         },
                         child: Text(S.of(context).testnet),
@@ -94,11 +95,14 @@ class ConnectionSyncPage extends BasePage {
                   context: context,
                   dividerPadding: EdgeInsets.symmetric(horizontal: 24),
                   itemCounter: (int sectionIndex) {
-                    return nodeListViewModel.nodes.length;
+                    return (dashboardViewModel.currentNetwork()==NetworkKind.mainnet?
+                      nodeListViewModelMainnet.nodesMainnet:nodeListViewModelTestnet.nodesTestnet).length;
                   },
                   itemBuilder: (_, sectionIndex, index) {
-                    final node = nodeListViewModel.nodes[index];
-                    final isSelected = node.keyIndex == nodeListViewModel.currentNode.keyIndex;
+                    final node = (dashboardViewModel.currentNetwork()==NetworkKind.mainnet?
+                    nodeListViewModelMainnet.nodesMainnet:nodeListViewModelTestnet.nodesTestnet)[index];
+                    final isSelected = node.keyIndex == (dashboardViewModel.currentNetwork()==NetworkKind.mainnet?
+                    nodeListViewModelMainnet.currentNode:nodeListViewModelTestnet.currentNode).keyIndex;
                     final nodeListRow = NodeListRow(
                       title: "${node.uriRaw}"+(isSelected?" (${S.of(context).selected})":""),
                       isSelected: isSelected,
@@ -113,12 +117,17 @@ class ConnectionSyncPage extends BasePage {
                             builder: (BuildContext context) {
                               return AlertWithTwoActions(
                                 alertTitle: S.of(context).change_current_node_title,
-                                alertContent: nodeListViewModel.getAlertContent(node.uriRaw),
+                                alertContent: (dashboardViewModel.currentNetwork()==NetworkKind.mainnet?
+                                nodeListViewModelMainnet.getAlertContent(node.uriRaw):
+                                nodeListViewModelTestnet.getAlertContent(node.uriRaw)),
                                 leftButtonText: S.of(context).cancel,
                                 rightButtonText: S.of(context).change,
                                 actionLeftButton: () => Navigator.of(context).pop(),
                                 actionRightButton: () async {
-                                  await nodeListViewModel.setAsCurrent(node);
+                                  if(dashboardViewModel.currentNetwork()==NetworkKind.mainnet)
+                                    await nodeListViewModelMainnet.setAsCurrent(node);
+                                  else
+                                    await nodeListViewModelTestnet.setAsCurrent(node);
                                   Navigator.of(context).pop();
                                 },
                               );
@@ -182,7 +191,10 @@ class ConnectionSyncPage extends BasePage {
                   false;
 
               if (confirmed) {
-                await nodeListViewModel.delete(node);
+                if(dashboardViewModel.currentNetwork()==NetworkKind.mainnet)
+                  await nodeListViewModelMainnet.delete(node);
+                else
+                  await nodeListViewModelTestnet.delete(node);
               }
             },
             backgroundColor: Colors.red,

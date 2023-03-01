@@ -11,18 +11,25 @@ import 'package:cake_wallet/utils/mobx.dart';
 
 part 'node_list_view_model.g.dart';
 
-class NodeListViewModel = NodeListViewModelBase with _$NodeListViewModel;
+class NodeListViewModelMainnet = NodeListViewModelBase with _$NodeListViewModelMainnet;
+class NodeListViewModelTestnet = NodeListViewModelBase with _$NodeListViewModelMainnet;
+
+enum NetworkKind {mainnet, testnet}
 
 abstract class NodeListViewModelBase with Store {
-  NodeListViewModelBase(this._nodeSource, this.wallet, this.settingsStore)
-      : nodes = ObservableList<Node>() {
-    _nodeSource.bindToList(nodes,
+  NodeListViewModelBase(this.network, this._nodeSourceMainnet, this._nodeSourceTestnet, this.wallet, this.settingsStore)
+      : nodesMainnet = ObservableList<Node>(), nodesTestnet = ObservableList<Node>() {
+    _nodeSourceMainnet.bindToList(nodesMainnet,
         filter: (Node val) => val?.type == wallet.type, initialFire: true);
+    _nodeSourceTestnet.bindToList(nodesTestnet,
+          filter: (Node val) => val?.type == wallet.type, initialFire: true);
   }
+
+  final NetworkKind network;
 
   @computed
   Node get currentNode {
-    final node = settingsStore.nodes[wallet.type];
+    final node = network == NetworkKind.mainnet ? settingsStore.nodesMainnet[wallet.type] : settingsStore.nodesTestnet[wallet.type];
 
     if (node == null) {
       throw Exception('No node for wallet type: ${wallet.type}');
@@ -35,28 +42,43 @@ abstract class NodeListViewModelBase with Store {
       S.current.change_current_node(uri) +
           '${uri.endsWith('.onion') || uri.contains('.onion:') ? '\n' + S.current.orbot_running_alert : ''}';
 
-  final ObservableList<Node> nodes;
+  final ObservableList<Node> nodesMainnet;
+  final ObservableList<Node> nodesTestnet;
   final SettingsStore settingsStore;
   final WalletBase wallet;
-  final Box<Node> _nodeSource;
+  final Box<Node> _nodeSourceMainnet;
+  final Box<Node> _nodeSourceTestnet;
+  Box<Node> getNodeSourceMainnet() {
+    return _nodeSourceMainnet;
+  }
+  Box<Node> getNodeSourceTestnet() {
+    return _nodeSourceTestnet;
+  }
+
+  Box<Node> getNodeSource() {
+    if(network==NetworkKind.mainnet)
+      return _nodeSourceMainnet;
+    else
+      return _nodeSourceTestnet;
+  }
 
   Future<void> reset() async {
-    await resetToDefault(_nodeSource);
+    await resetToDefault(_nodeSourceMainnet, _nodeSourceTestnet);
 
-    Node node;
+    Node? node;
 
     switch (wallet.type) {
       case WalletType.bitcoin:
-        node = getBitcoinDefaultElectrumServer(nodes: _nodeSource)!;
+        node = getBitcoinDefaultElectrumServer(nodes: getNodeSource())!;
         break;
       case WalletType.monero:
-        node = getMoneroDefaultNode(nodes: _nodeSource);
+        node = getMoneroDefaultNode(nodes: getNodeSource());
         break;
       case WalletType.litecoin:
-        node = getLitecoinDefaultElectrumServer(nodes: _nodeSource)!;
+        node = getLitecoinDefaultElectrumServer(nodes: getNodeSource())!;
         break;
       case WalletType.haven:
-        node = getHavenDefaultNode(nodes: _nodeSource)!;
+        node = getHavenDefaultNode(nodes: getNodeSource())!;
         break;
       default:
         throw Exception('Unexpected wallet type: ${wallet.type}');
@@ -68,6 +90,11 @@ abstract class NodeListViewModelBase with Store {
   @action
   Future<void> delete(Node node) async => node.delete();
 
-  Future<void> setAsCurrent(Node node) async =>
-      settingsStore.nodes[wallet.type] = node;
+  Future<void> setAsCurrent(Node? node) async {
+    if(node==null)return;
+    if(network==NetworkKind.mainnet)
+      settingsStore.nodesMainnet[wallet.type] = node;
+    else
+      settingsStore.nodesTestnet[wallet.type] = node;
+  }
 }

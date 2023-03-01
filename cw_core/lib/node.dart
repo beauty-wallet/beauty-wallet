@@ -36,7 +36,8 @@ class Node extends HiveObject with Keyable {
         trusted = map['trusted'] as bool? ?? false;
 
   static const typeId = 1;
-  static const boxName = 'Nodes';
+  static const boxNameMainnet = 'NodesMainnet';
+  static const boxNameTestnet = 'NodesTestnet';
 
   @HiveField(0, defaultValue: '')
   late String uriRaw;

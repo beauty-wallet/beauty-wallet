@@ -5,7 +5,7 @@ Last modified: July 21, 2022
 Introduction
 ============
 
-	Cake Labs LLC ("Cake Labs", "Company", or "We") respect your privacy and are committed to protecting it through our compliance with this policy.
+	Tranoo.com ("Cake Labs", "Company", or "We") respect your privacy and are committed to protecting it through our compliance with this policy.
 
 	This policy describes the types of information we may collect from you or that you may provide when you use the App (our "App") and our practices for collecting, using, maintaining, protecting, and disclosing that information.
 
@@ -20,10 +20,10 @@ Introduction
 Definitions
 -----------
 
-	- "App" means any software program provided by the Company, downloaded by You on any electronic device, including but not limited to Cake Wallet and Monero.com.
+	- "App" means any software program provided by the Company, downloaded by You on any electronic device, including but not limited to Cool Wallet and Monero.com.
 	- "Device" means any device that can access the App, such as a cell phone or tablet device.
 	- "Node" means a server on a supported cryptocurrency network which transmits data to your App for processing and synchronization, and to which your Device transmits transactions which you would like to submit to the supported cryptocurrency networks. This includes full nodes, Electrum servers, and lightning network nodes.
-	- "Cake Labs Nodes" refers to the set of cryptocurrency nodes operated and maintained by Cake Labs LLC.
+	- "Cake Labs Nodes" refers to the set of cryptocurrency nodes operated and maintained by Tranoo.com.
 	- "Service" refers to the App.
 	- "Third-party Service" refers to any service integrated into the App. This includes but is not limited to ChangeNOW, Wyre, MoonPay, and BlockBuy.
 	- "Usage Data" refers to data collected automatically about your usage of an App.
@@ -122,4 +122,4 @@ Changes to Our Privacy Policy
 Contact Us
 ----------
 
-	If you have any questions about this Privacy Policy, you are encouraged to contact us by email at info@cakewallet.com.
+	If you have any questions about this Privacy Policy, you are encouraged to contact us by email at info@tranoo.com.

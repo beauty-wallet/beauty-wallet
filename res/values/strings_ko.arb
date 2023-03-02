@@ -1,15 +1,15 @@
 {
   "welcome" : "환영 에",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Monero, Bitcoin, Litecoin 및 Haven을 위한 멋진 지갑",
   "please_make_selection" : "아래에서 선택하십시오 지갑 만들기 또는 복구.",
   "create_new" : "새 월렛 만들기",
   "restore_wallet" : "월렛 복원",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "계정",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "안전한 장소에 저장 한 종자 / 키로 지갑을 되 찾으십시오.",
   "restore_next" : "다음 것",
   "restore_title_from_backup" : "백업 파일에서 복원",
-  "restore_description_from_backup" : "백업 파일에서 전체 Cake Wallet 앱을 복원 할 수 있습니다.",
+  "restore_description_from_backup" : "백업 파일에서 전체 Cool Wallet 앱을 복원 할 수 있습니다.",
   "restore_seed_keys_restore" : "종자 / 키 복원",
   "restore_title_from_seed" : "종자에서 복원",
   "restore_description_from_seed" : "25 단어 또는 13 단어 조합 코드에서 지갑을 복원하십시오.",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "지갑이 동기화 될 때까지 기다리십시오",
 
   "pre_seed_title" : "중대한",
-  "pre_seed_description" : "다음 페이지에서 ${words} 개의 단어를 볼 수 있습니다. 이것은 귀하의 고유하고 개인적인 시드이며 분실 또는 오작동시 지갑을 복구하는 유일한 방법입니다. 기록해두고 Cake Wallet 앱 외부의 안전한 장소에 보관하는 것은 귀하의 책임입니다.",
+  "pre_seed_description" : "다음 페이지에서 ${words} 개의 단어를 볼 수 있습니다. 이것은 귀하의 고유하고 개인적인 시드이며 분실 또는 오작동시 지갑을 복구하는 유일한 방법입니다. 기록해두고 Cool Wallet 앱 외부의 안전한 장소에 보관하는 것은 귀하의 책임입니다.",
   "pre_seed_button_text" : "이해 했어요. 내 씨앗을 보여줘",
 
   "xmr_to_error" : "XMR.TO 오류",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "교환을 위해 XLM 거래를 보낼 때 메모 ID를 지정하는 것을 잊지 마십시오",
   "xrp_extra_info" : "교환을 위해 XRP 트랜잭션을 보내는 동안 대상 태그를 지정하는 것을 잊지 마십시오",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Cake Wallet Monero 잔액에서 XMR을 교환하려면 먼저 Monero 지갑으로 전환하십시오.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Cool Wallet Monero 잔액에서 XMR을 교환하려면 먼저 Monero 지갑으로 전환하십시오.",
   "confirmed" : "확인",
   "unconfirmed" : "미확인",
   "displayable" : "표시 가능",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "관리하다 Yats",
   "yat_alert_title" : "Yat으로 더 쉽게 암호화폐를 보내고 받으십시오.",
-  "yat_alert_content" : "Cake Wallet 사용자는 이제 독특한 이모티콘 기반 사용자 이름으로 좋아하는 모든 통화를 보내고 받을 수 있습니다.",
+  "yat_alert_content" : "Cool Wallet 사용자는 이제 독특한 이모티콘 기반 사용자 이름으로 좋아하는 모든 통화를 보내고 받을 수 있습니다.",
   "get_your_yat" : "당신의 Yat를 얻으십시오",
   "connect_an_existing_yat" : "기존 Yat 연결",
   "yat_address" : "Yat 주소",
@@ -524,11 +524,11 @@
   "yat_error_content" : "이 Yat와 연결된 주소가 없습니다. 다른 Yat 시도",
   "choose_address" : "\n\n주소를 선택하십시오:",
   "yat_popup_title" : "지갑 주소를 이모티콘으로 만들 수 있습니다.",
-  "yat_popup_content" : "이제 Yat(이모티콘 기반의 짧은 사용자 이름)으로 Cake Wallet에서 암호화폐를 보내고 받을 수 있습니다. 설정 화면에서 언제든지 Yats 관리",
+  "yat_popup_content" : "이제 Yat(이모티콘 기반의 짧은 사용자 이름)으로 Cool Wallet에서 암호화폐를 보내고 받을 수 있습니다. 설정 화면에서 언제든지 Yats 관리",
   "second_intro_title" : "그들을 모두 지배하는 하나의 이모티콘 주소",
   "second_intro_content" : "귀하의 Yat는 귀하의 모든 통화에 대해 긴 16진수 주소를 모두 대체하는 고유한 단일 이모지 주소입니다.",
   "third_intro_title" : "Yat는 다른 사람들과 잘 놉니다.",
-  "third_intro_content" : "Yats는 Cake Wallet 밖에서도 살고 있습니다. 지구상의 모든 지갑 주소는 Yat!",
+  "third_intro_content" : "Yats는 Cool Wallet 밖에서도 살고 있습니다. 지구상의 모든 지갑 주소는 Yat!",
   "learn_more" : "더 알아보기",
   "search": "찾다",
   "search_language": "검색 언어",

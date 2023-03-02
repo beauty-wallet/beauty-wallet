@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2018-2023 Cake Labs LLC.
+Copyright (c) 2018-2023 Tranoo.com.
 Copyright (c) 2023 Beauty Wallet Team. All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

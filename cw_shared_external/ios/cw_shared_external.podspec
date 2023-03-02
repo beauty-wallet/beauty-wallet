@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
   s.version          = '0.0.1'
   s.summary          = 'Shared libraries for monero and haven.'
   s.description      = 'Shared libraries for monero and haven.'
-  s.homepage         = 'http://cakewallet.com'
+  s.homepage         = 'https://github.com/cool-wallet'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Cake Wallet' => 'm@cakewallet.com' }
+  s.author           = { 'Cool Wallet' => 'https://github.com/cool-wallet' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'

@@ -25,11 +25,11 @@
   },
   {
     "question" : "Que puis-je faire si je perds ma phrase secrète (seed) ?",
-    "answer" : "Si vous oubliez votre phrase secrète (seed), il y a des chances que vous l'ayez inscrite quelque part. Vérifiez vos notes et regardez sur votre ordinateur. Si vous ne parvenez pas à la retrouver, il est possible que vous ayez effectué une sauvegarde de Cake Wallet (dans ce cas vous pourrez restaurer d'après cette sauvegarde). Si aucune des ces options ne convient, malheureusement il n'y a plus rien à faire, vos fonds sont définitivement perdus.\n"
+    "answer" : "Si vous oubliez votre phrase secrète (seed), il y a des chances que vous l'ayez inscrite quelque part. Vérifiez vos notes et regardez sur votre ordinateur. Si vous ne parvenez pas à la retrouver, il est possible que vous ayez effectué une sauvegarde de Cool Wallet (dans ce cas vous pourrez restaurer d'après cette sauvegarde). Si aucune des ces options ne convient, malheureusement il n'y a plus rien à faire, vos fonds sont définitivement perdus.\n"
   },
   {
     "question" : "Collectez vous des informations à propos de mon portefeuille (wallet) ?",
-    "answer" : "Cake Wallet NE COLLECTE PAS d'informations à propos de votre portefeuille (wallet). Nous sommes respectueux de votre intimité.\n"
+    "answer" : "Cool Wallet NE COLLECTE PAS d'informations à propos de votre portefeuille (wallet). Nous sommes respectueux de votre intimité.\n"
   },
   {
     "question" : "Est il possible d'annuler une transaction ?",
@@ -53,7 +53,7 @@
     "answer" : "Si vous avez des soucis avec une plateforme d'échange, le mieux est de contacter la plateforme d'échange directement. Nous avons des partenariats avec XMR.TO, Morph et ChangeNow, donc essayez http://xmr.to, http://changenow.io, ou http://morphtoken.com et contactez leur support.\n"
   },
   {
-    "question" : "Comment puis-je contacter le support de Cake Wallet ?",
-    "answer" : "Envoyez un email à support@cakewallet.com, rejoignez le groupe Telegram @cakewallet_bot, ou @CakeWalletXMR sur Twitter!\n"
+    "question" : "Comment puis-je contacter le support de Cool Wallet ?",
+    "answer" : "Envoyez un email à support@tranoo.com, rejoignez le groupe Telegram @tranoowallet_bot, ou @tranoowallet sur Twitter!\n"
   }
 ]

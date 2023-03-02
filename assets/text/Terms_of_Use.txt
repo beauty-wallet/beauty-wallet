@@ -2,7 +2,7 @@ Last Modified: Mar 1, 2023
 
 Acceptance of the Terms of Use
 ==============================
-	These terms of use are entered into by and between You and Tranoo Labs, a company formed under the laws of Xxxx ("Company," "we," or "us"). The following terms and conditions "Terms of Use") govern your access to and use of the Cake Wallet and Monero.com apps, including any content, functionality, and services offered on or through the Cake Wallet app and the Monero.com app, as applicable (the “App").
+	These terms of use are entered into by and between You and Tranoo Labs, a company formed under the laws of Xxxx ("Company," "we," or "us"). The following terms and conditions "Terms of Use") govern your access to and use of the Cool Wallet and Monero.com apps, including any content, functionality, and services offered on or through the Cool Wallet app and the Monero.com app, as applicable (the “App").
 	Please read the Terms of Use carefully before you start to use the App. By using the App you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, incorporated herein by reference. If you do not wish to agree to these Terms of Use or the Privacy Policy, you must not access or use the App.
 
 Changes to the Terms of Use
@@ -45,7 +45,7 @@ Intellectual Property Rights
 Trademarks
 ==========
 
-	The Company name, the term Cake Wallet, the Company logo, and all related names, logos, product and service names, designs, and slogans are trademarks of the Company or its affiliates or licensors. You must not use such marks without the prior written permission of the Company. All other names, logos, product and service names, designs, and slogans on this App are the trademarks of their respective owners.
+	The Company name, the term Cool Wallet, the Company logo, and all related names, logos, product and service names, designs, and slogans are trademarks of the Company or its affiliates or licensors. You must not use such marks without the prior written permission of the Company. All other names, logos, product and service names, designs, and slogans on this App are the trademarks of their respective owners.
 
 Prohibited Uses
 ===============
@@ -179,10 +179,10 @@ Waiver and Severability
 Entire Agreement
 ================
 
-	The Terms of Use and our Privacy Policy constitute the sole and entire agreement between you and Cake Labs LLC regarding the App and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the App.
+	The Terms of Use and our Privacy Policy constitute the sole and entire agreement between you and Tranoo.com regarding the App and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the App.
 
 Your Comments and Concerns
 ==========================
 
-	This App is operated by Cake Labs LLC.
-	All feedback, comments, and other communications relating to the App should be directed to info@cakewallet.com. All requests for technical support should be directed to support@cakewallet.com.
+	This App is operated by Tranoo.com.
+	All feedback, comments, and other communications relating to the App should be directed to https://tranoo.com/ . All requests for technical support should be directed to https://tranoo.com/ .

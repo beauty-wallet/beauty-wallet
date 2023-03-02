@@ -7,17 +7,23 @@ import 'package:cw_core/wallet_type.dart';
 
 
 Future<List<Node>> loadDefaultNodes(NetworkKind network) async {
-  final nodesRaw = await rootBundle.loadString('assets/monery_node_list_${network.name}.yml');
-  final loadedNodes = loadYaml(nodesRaw) as YamlList;
-  final nodes = <Node>[];
-
-  for (final raw in loadedNodes) {
-    if (raw is Map) {
-      final node = Node.fromMap(Map<String, Object>.from(raw));
-      node.type = WalletType.monero;
-      nodes.add(node);
-    }
+  final nodesRaw = await rootBundle.loadString('assets/monero_node_list_${network.name}.yml');
+  final YamlList? loadedNodes;
+  if (nodesRaw!=null) {
+    var loadYaml2 = loadYaml(nodesRaw);
+    loadedNodes = loadYaml2==null?null:loadYaml2 as YamlList;
+  } else {
+    loadedNodes = null;
   }
+  final nodes = <Node>[];
+  if(loadedNodes!=null)
+    for (final raw in loadedNodes) {
+      if (raw is Map) {
+        final node = Node.fromMap(Map<String, Object>.from(raw));
+        node.type = WalletType.monero;
+        nodes.add(node);
+      }
+    }
 
   return nodes;
 }
@@ -25,16 +31,18 @@ Future<List<Node>> loadDefaultNodes(NetworkKind network) async {
 Future<List<Node>> loadBitcoinElectrumServerList(NetworkKind network) async {
   final serverListRaw =
       await rootBundle.loadString('assets/bitcoin_electrum_server_list_${network.name}.yml');
-  final loadedServerList = loadYaml(serverListRaw) as YamlList;
+  final loadedServerList0 = loadYaml(serverListRaw);
+  final loadedServerList = loadedServerList0==null?null:loadedServerList0 as YamlList;
   final serverList = <Node>[];
 
-  for (final raw in loadedServerList) {
+  if(loadedServerList!=null)
+    for (final raw in loadedServerList) {
      if (raw is Map) {
-      final node = Node.fromMap(Map<String, Object>.from(raw));
-      node.type = WalletType.bitcoin;
-      serverList.add(node);
+        final node = Node.fromMap(Map<String, Object>.from(raw));
+        node.type = WalletType.bitcoin;
+        serverList.add(node);
+      }
     }
-  }
 
   return serverList;
 }
@@ -42,7 +50,8 @@ Future<List<Node>> loadBitcoinElectrumServerList(NetworkKind network) async {
 Future<List<Node>> loadLitecoinElectrumServerList(NetworkKind network) async {
   final serverListRaw =
       await rootBundle.loadString('assets/litecoin_electrum_server_list_${network.name}.yml');
-  final loadedServerList = loadYaml(serverListRaw) as YamlList;
+  var loadYaml2 = loadYaml(serverListRaw);
+  final loadedServerList = loadYaml2==null?[]:loadYaml2 as YamlList;
   final serverList = <Node>[];
 
   for (final raw in loadedServerList) {
@@ -58,7 +67,8 @@ Future<List<Node>> loadLitecoinElectrumServerList(NetworkKind network) async {
 
 Future<List<Node>> loadDefaultHavenNodes(NetworkKind network) async {
   final nodesRaw = await rootBundle.loadString('assets/haven_node_list_${network.name}.yml');
-  final loadedNodes = loadYaml(nodesRaw) as YamlList;
+  var loadYaml2 = loadYaml(nodesRaw);
+  final loadedNodes = loadYaml2==null?[]:loadYaml2 as YamlList;
   final nodes = <Node>[];
 
   for (final raw in loadedNodes) {

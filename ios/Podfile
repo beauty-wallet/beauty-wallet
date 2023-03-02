@@ -34,7 +34,7 @@ target 'Runner' do
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 
-  # Cake Wallet (Legacy)
+  # Cool Wallet (Legacy)
   pod 'CryptoSwift'
   pod 'UnstoppableDomainsResolution', '~> 4.0.0'
 end

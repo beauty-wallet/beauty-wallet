@@ -1,15 +1,15 @@
 {
   "welcome" : "स्वागत हे सेवा मेरे",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Monero, Bitcoin, Litecoin, और Haven के लिए बहुत बढ़िया बटुआ",
   "please_make_selection" : "कृपया नीचे चयन करें अपना बटुआ बनाएं या पुनर्प्राप्त करें.",
   "create_new" : "नया बटुआ बनाएँ",
   "restore_wallet" : "वॉलेट को पुनर्स्थापित करें",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "हिसाब किताब",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "कृपया प्रतीक्षा करें जब तक आपका बटुआ सिंक्रनाइज़ नहीं किया जाता है",
 
   "pre_seed_title" : "महत्वपूर्ण",
-  "pre_seed_description" : "अगले पेज पर आपको ${words} शब्दों की एक श्रृंखला दिखाई देगी। यह आपका अद्वितीय और निजी बीज है और नुकसान या खराबी के मामले में अपने बटुए को पुनर्प्राप्त करने का एकमात्र तरीका है। यह आपकी जिम्मेदारी है कि इसे नीचे लिखें और इसे Cake Wallet ऐप के बाहर सुरक्षित स्थान पर संग्रहीत करें।",
+  "pre_seed_description" : "अगले पेज पर आपको ${words} शब्दों की एक श्रृंखला दिखाई देगी। यह आपका अद्वितीय और निजी बीज है और नुकसान या खराबी के मामले में अपने बटुए को पुनर्प्राप्त करने का एकमात्र तरीका है। यह आपकी जिम्मेदारी है कि इसे नीचे लिखें और इसे Cool Wallet ऐप के बाहर सुरक्षित स्थान पर संग्रहीत करें।",
   "pre_seed_button_text" : "मै समझता हुँ। मुझे अपना बीज दिखाओ",
 
   "xmr_to_error" : "XMR.TO त्रुटि",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Yats प्रबंधित करें",
   "yat_alert_title" : "के साथ अधिक आसानी से क्रिप्टो भेजें और प्राप्त करें Yat",
-  "yat_alert_content" : "Cake Wallet उपयोगकर्ता अब अपनी सभी पसंदीदा मुद्राओं को एक-एक तरह के इमोजी-आधारित उपयोगकर्ता नाम के साथ भेज और प्राप्त कर सकते हैं।",
+  "yat_alert_content" : "Cool Wallet उपयोगकर्ता अब अपनी सभी पसंदीदा मुद्राओं को एक-एक तरह के इमोजी-आधारित उपयोगकर्ता नाम के साथ भेज और प्राप्त कर सकते हैं।",
   "get_your_yat" : "अपना प्राप्त करें Yat",
   "connect_an_existing_yat" : "मौजूदा Yat कनेक्ट करें",
   "yat_address" : "Yat पता",
@@ -524,11 +524,11 @@
   "yat_error_content" : "इसके साथ कोई पता लिंक नहीं है Yat. कोई दूसरा आज़माएं Yat",
   "choose_address" : "\n\nकृपया पता चुनें:",
   "yat_popup_title" : "आपका वॉलेट पता इमोजी किया जा सकता है।",
-  "yat_popup_content" : "अब आप क्रिप्टो भेज और प्राप्त कर सकते हैं Cake Wallet अपने Yat के साथ - एक छोटा, इमोजी-आधारित उपयोगकर्ता नाम। सेटिंग स्क्रीन पर किसी भी समय Yats को प्रबंधित करें",
+  "yat_popup_content" : "अब आप क्रिप्टो भेज और प्राप्त कर सकते हैं Cool Wallet अपने Yat के साथ - एक छोटा, इमोजी-आधारित उपयोगकर्ता नाम। सेटिंग स्क्रीन पर किसी भी समय Yats को प्रबंधित करें",
   "second_intro_title" : "उन सभी पर राज करने के लिए एक इमोजी पता",
   "second_intro_content" : "आपका Yat एक अद्वितीय इमोजी पता है जो आपकी सभी मुद्राओं के लिए आपके सभी लंबे हेक्साडेसिमल पतों को बदल देता है।",
   "third_intro_title" : "Yat दूसरों के साथ अच्छा खेलता है",
-  "third_intro_content" : "Yats Cake Wallet के बाहर भी रहता है। धरती पर किसी भी वॉलेट पते को Yat से बदला जा सकता है!",
+  "third_intro_content" : "Yats Cool Wallet के बाहर भी रहता है। धरती पर किसी भी वॉलेट पते को Yat से बदला जा सकता है!",
   "learn_more" : "और अधिक जानें",
   "search": "खोज",
   "search_language": "भाषा खोजें",

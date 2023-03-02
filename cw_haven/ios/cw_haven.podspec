@@ -5,11 +5,11 @@
 Pod::Spec.new do |s|
   s.name             = 'cw_haven'
   s.version          = '0.0.1'
-  s.summary          = 'Cake Wallet Haven'
-  s.description      = 'Cake Wallet wrapper over Haven project'
-  s.homepage         = 'http://cakewallet.com'
+  s.summary          = 'Cool Wallet Haven'
+  s.description      = 'Cool Wallet wrapper over Haven project'
+  s.homepage         = 'https://github.com/cool-wallet'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Cake Wallet' => 'support@cakewallet.com' }
+  s.author           = { 'Cool Wallet' => 'https://github.com/cool-wallet' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h, Classes/*.h, ../shared_external/ios/libs/monero/include/src/**/*.h, ../shared_external/ios/libs/monero/include/contrib/**/*.h, ../shared_external/ios/libs/monero/include/../shared_external/ios/**/*.h'

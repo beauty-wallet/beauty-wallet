@@ -1,15 +1,15 @@
 {
   "welcome" : "Hoş Geldiniz",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Monero, Bitcoin, Litecoin ve Haven için harika cüzdan",
   "please_make_selection" : "Cüzdan oluşturmak veya geri döndürmek için aşağıdan seçim yap.",
   "create_new" : "Yeni Cüzdan Oluştur",
   "restore_wallet" : "Cüzdanı Geri Döndür",
 
-  "monero_com": "Cake Wallet tarafından Monero.com",
+  "monero_com": "Cool Wallet tarafından Monero.com",
   "monero_com_wallet_text": "Monero için harika cüzdan",
 
-  "haven_app": "Cake Wallet tarafından Haven",
+  "haven_app": "Cool Wallet tarafından Haven",
   "haven_app_wallet_text": "Haven için harika cüzdan ",
 
   "accounts" : "Hesaplar",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Güvenli bir yere kaydettiğin tohumdan/anahtarlardan cüzdanını geri döndür",
   "restore_next" : "İleri",
   "restore_title_from_backup" : "Yedekten geri döndür",
-  "restore_description_from_backup" : "Yedek dosyandan tüm Cake Wallet uygulamasını geri döndürebilirsin",
+  "restore_description_from_backup" : "Yedek dosyandan tüm Cool Wallet uygulamasını geri döndürebilirsin",
   "restore_seed_keys_restore" : "Tohumu/Anahtarları Geri Döndür",
   "restore_title_from_seed" : "Tohumdan geri döndür",
   "restore_description_from_seed" : "Cüzdanınızı 25 veya 13 kelimelik kombinasyon kodundan geri döndürün",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Lütfen cüzdanın senkronize olana kadar bekle",
 
   "pre_seed_title" : "UYARI",
-  "pre_seed_description" : "Bir sonraki sayfada ${words} kelime göreceksin. Bu senin benzersiz ve özel tohumundur, kaybetmen veya silinmesi durumunda cüzdanını kurtarmanın TEK YOLUDUR. Bunu yazmak ve Cake Wallet uygulaması dışında güvenli bir yerde saklamak tamamen SENİN sorumluluğunda.",
+  "pre_seed_description" : "Bir sonraki sayfada ${words} kelime göreceksin. Bu senin benzersiz ve özel tohumundur, kaybetmen veya silinmesi durumunda cüzdanını kurtarmanın TEK YOLUDUR. Bunu yazmak ve Cool Wallet uygulaması dışında güvenli bir yerde saklamak tamamen SENİN sorumluluğunda.",
   "pre_seed_button_text" : "Anladım. Bana tohumumu göster.",
 
   "xmr_to_error" : "XMR.TO hatası",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "Lütfen takas için XLM işlemi gönderirken Memo ID'yi belirtmeyi unutmayın",
   "xrp_extra_info" : "Lütfen takas için XRP işlemi gönderirken Hedef Etiketi (Destination Tag) belirtmeyi unutmayın",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Cake Wallet'daki Monero bakiyenizi kullanarak takas yapmak istiyorsan, lütfen önce Monero cüzdanına geç.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Cool Wallet'daki Monero bakiyenizi kullanarak takas yapmak istiyorsan, lütfen önce Monero cüzdanına geç.",
   "confirmed" : "Onaylı",
   "unconfirmed" : "Onaylanmamış",
   "displayable" : "Gösterilebilir",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Yats'ları yönet",
   "yat_alert_title" : "Yat ile daha kolay kripto gönderin ve alın",
-  "yat_alert_content" : "Cake Wallet kullanıcıları artık tüm favori koin birimlerini benzersiz emoji tabanlı kullanıcı adıyla gönderebilir ve alabilirler.",
+  "yat_alert_content" : "Cool Wallet kullanıcıları artık tüm favori koin birimlerini benzersiz emoji tabanlı kullanıcı adıyla gönderebilir ve alabilirler.",
   "get_your_yat" : "Yat'ını al",
   "connect_an_existing_yat" : "Mevcut bir Yat'ı bağla",
   "connect_yats": "Yat'lara bağlan",
@@ -524,11 +524,11 @@
   "yat_error_content" : "Bu Yat'a bağlı bir adres yok. Başka bir Yat'ı deneyin",
   "choose_address" : "\n\nLütfen adresi seçin:",
   "yat_popup_title" : "Cüzdan adresiniz emojileştirilebilir.",
-  "yat_popup_content" : "Artık Cake Wallet'ta kısa, emoji tabanlı bir kullanıcı adı olan Yat'ınızla kripto gönderebilir ve alabilirsiniz. Yats'ı istediğiniz zaman ayarlar ekranından yönetebilirsiniz",
+  "yat_popup_content" : "Artık Cool Wallet'ta kısa, emoji tabanlı bir kullanıcı adı olan Yat'ınızla kripto gönderebilir ve alabilirsiniz. Yats'ı istediğiniz zaman ayarlar ekranından yönetebilirsiniz",
   "second_intro_title" : "Hepsini yönetebilen tek bir emoji adresi",
   "second_intro_content" : "Yat'ınız, tüm para birimleriniz için uzun onaltılık adreslerinizin yerini alan benzersiz emoji adresidir.",
   "third_intro_title" : "Yat diğerleriyle iyi çalışır",
-  "third_intro_content" : "Yat'lar Cake Wallet'ın dışında da çalışabilir. Dünya üzerindeki herhangi bir cüzdan adresi Yat ile değiştirilebilir!",
+  "third_intro_content" : "Yat'lar Cool Wallet'ın dışında da çalışabilir. Dünya üzerindeki herhangi bir cüzdan adresi Yat ile değiştirilebilir!",
   "learn_more" : "Daha fazla öğren",
   "search": "Arat",
   "search_language": "Dil arat",

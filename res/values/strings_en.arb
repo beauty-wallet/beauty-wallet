@@ -1,15 +1,15 @@
 {
   "welcome" : "Welcome to",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Awesome wallet for Monero, Bitcoin, Litecoin, and Haven",
   "please_make_selection" : "Please make a selection below to create or recover your wallet.",
   "create_new" : "Create New Wallet",
   "restore_wallet" : "Restore Wallet",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
 
   "accounts" : "Accounts",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Get back your wallet from seed/keys that you've saved to secure place",
   "restore_next" : "Next",
   "restore_title_from_backup" : "Restore from backup",
-  "restore_description_from_backup" : "You can restore the whole Cake Wallet app from your back-up file",
+  "restore_description_from_backup" : "You can restore the whole Cool Wallet app from your back-up file",
   "restore_seed_keys_restore" : "Seed/Keys Restore",
   "restore_title_from_seed" : "Restore from seed",
   "restore_description_from_seed" : "Restore your wallet from either the 25 word or 13 word combination code",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Please wait until your wallet is synchronized",
 
   "pre_seed_title" : "IMPORTANT",
-  "pre_seed_description" : "On the next page you will see a series of ${words} words. This is your unique and private seed and it is the ONLY way to recover your wallet in case of loss or malfunction. It is YOUR responsibility to write it down and store it in a safe place outside of the Cake Wallet app.",
+  "pre_seed_description" : "On the next page you will see a series of ${words} words. This is your unique and private seed and it is the ONLY way to recover your wallet in case of loss or malfunction. It is YOUR responsibility to write it down and store it in a safe place outside of the Cool Wallet app.",
   "pre_seed_button_text" : "I understand. Show me my seed",
 
   "xmr_to_error" : "XMR.TO error",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "Please don’t forget to specify the Memo ID while sending the XLM transaction for the exchange",
   "xrp_extra_info" : "Please don’t forget to specify the Destination Tag while sending the XRP transaction for the exchange",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "If you want to exchange XMR from your Cake Wallet Monero balance, please switch to your Monero wallet first.",
+  "exchange_incorrect_current_wallet_for_xmr" : "If you want to exchange XMR from your Cool Wallet Monero balance, please switch to your Monero wallet first.",
   "confirmed" : "Confirmed",
   "unconfirmed" : "Unconfirmed",
   "displayable" : "Displayable",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Manage Yats",
   "yat_alert_title" : "Send and receive crypto more easily with Yat",
-  "yat_alert_content" : "Cake Wallet users can now send and receive all their favorite currencies with a one-of-a-kind emoji-based username.",
+  "yat_alert_content" : "Cool Wallet users can now send and receive all their favorite currencies with a one-of-a-kind emoji-based username.",
   "get_your_yat" : "Get your Yat",
   "connect_an_existing_yat" : "Connect an existing Yat",
   "connect_yats": "Connect Yats",
@@ -524,11 +524,11 @@
   "yat_error_content" : "No addresses linked with this Yat. Try another Yat",
   "choose_address" : "\n\nPlease choose the address:",
   "yat_popup_title" : "Your wallet address can be emojified.",
-  "yat_popup_content" : "You can now send and receive crypto in Cake Wallet with your Yat - a short, emoji-based username. Manage Yats at any time on the settings screen",
+  "yat_popup_content" : "You can now send and receive crypto in Cool Wallet with your Yat - a short, emoji-based username. Manage Yats at any time on the settings screen",
   "second_intro_title" : "One emoji address to rule them all",
   "second_intro_content" : "Your Yat is a single unique emoji address that replaces all of your long hexadecimal addresses for all of your currencies.",
   "third_intro_title" : "Yat plays nicely with others",
-  "third_intro_content" : "Yats live outside of Cake Wallet, too. Any wallet address on earth can be replaced with a Yat!",
+  "third_intro_content" : "Yats live outside of Cool Wallet, too. Any wallet address on earth can be replaced with a Yat!",
   "learn_more" : "Learn More",
   "search": "Search",
   "search_language": "Search language",

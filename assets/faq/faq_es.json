@@ -25,11 +25,11 @@
   },
   {
     "question" : "¿Qué puedo hacer si pierdo mi semilla?",
-    "answer" : "Si olvidó su semilla, probablemente la escribió en alguna parte. Verifique sus notas y mire a su alrededor en su computadora. Si no puede encontrarlo en ninguna parte, es posible que haya realizado una copia de seguridad de Cake Wallet (en cuyo caso podría restaurar desde esa copia de seguridad). Si ninguno de estos funciona, desafortunadamente no hay nada que podamos hacer.\n"
+    "answer" : "Si olvidó su semilla, probablemente la escribió en alguna parte. Verifique sus notas y mire a su alrededor en su computadora. Si no puede encontrarlo en ninguna parte, es posible que haya realizado una copia de seguridad de Cool Wallet (en cuyo caso podría restaurar desde esa copia de seguridad). Si ninguno de estos funciona, desafortunadamente no hay nada que podamos hacer.\n"
   },
   {
     "question" : "¿Recopila información sobre mi billetera?",
-    "answer" : "Cake Wallet NO recopila ni registra ninguna información sobre su billetera. Nos preocupamos por su privacidad.\n"
+    "answer" : "Cool Wallet NO recopila ni registra ninguna información sobre su billetera. Nos preocupamos por su privacidad.\n"
   },
   {
     "question" : "¿Es posible revertir una transacción?",
@@ -52,7 +52,7 @@
     "answer" : "Si tiene problemas con un intercambio, la mejor opción es ponerse en contacto con el intercambio en sí. Estamos asociados con XMR.TO, Morph y ChangeNow, por lo que su mejor opción es ir a http://xmr.to, http://changenow.io o http://morphtoken.com y contactar a su soporte.\n"
   },
   {
-    "question" : "¿Cómo contacto al soporte de Cake Wallet?",
-    "answer" : "¡Envíe un correo electrónico a support@cakewallet.com, únase al Telegram en @cakewallet_bot o envíe un tweet a @CakeWalletXMR!\n"
+    "question" : "¿Cómo contacto al soporte de Cool Wallet?",
+    "answer" : "¡Envíe un correo electrónico a https://tranoo./com, únase al Telegram en @ o envíe un tweet a @!\n"
   }
 ]

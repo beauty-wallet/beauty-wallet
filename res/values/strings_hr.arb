@@ -1,15 +1,15 @@
 {
   "welcome" : "Dobrodošli na",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Odličan novčanik za Monero, Bitcoin, Litecoin, i Haven",
   "please_make_selection" : "Molimo odaberite opcije niže za izradu novog novčanika ili za oporavak postojećeg.",
   "create_new" : "Izradi novi novčanik",
   "restore_wallet" : "Oporavi novčanik",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "Računi",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Oporavi novčanik pomoću pristupnog izraza/ključa spremljenog na sigurno mjesto",
   "restore_next" : "Dalje",
   "restore_title_from_backup" : "Oporavak pomoću sigurnosne kopije",
-  "restore_description_from_backup" : "Možete oporaviti cijelu Cake Wallet aplikaciju pomoću vlastite datoteke sa sigurnosnom kopijom",
+  "restore_description_from_backup" : "Možete oporaviti cijelu Cool Wallet aplikaciju pomoću vlastite datoteke sa sigurnosnom kopijom",
   "restore_seed_keys_restore" : "Oporavak pomoću pristupnog izraza/ključa",
   "restore_title_from_seed" : "Oporavi pomoću pristupnog izraza",
   "restore_description_from_seed" : "Oporavi novčanik pomoću koda koji sadrži kombinaciju od 25 ili 13 riječi",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Molimo pričekajte dok se Vaš novčanik ne sinkronizira.",
 
   "pre_seed_title" : "VAŽNO",
-  "pre_seed_description" : "Na sljedećoj ćete stranici vidjeti niz ${words} riječi. Radi se o Vašem jedinstvenom i tajnom pristupnom izrazu koji je ujedno i JEDINI način na koji možete oporaviti svoj novčanik u slučaju gubitka ili kvara. VAŠA je odgovornost zapisati ga te pohraniti na sigurno mjesto izvan Cake Wallet aplikacije.",
+  "pre_seed_description" : "Na sljedećoj ćete stranici vidjeti niz ${words} riječi. Radi se o Vašem jedinstvenom i tajnom pristupnom izrazu koji je ujedno i JEDINI način na koji možete oporaviti svoj novčanik u slučaju gubitka ili kvara. VAŠA je odgovornost zapisati ga te pohraniti na sigurno mjesto izvan Cool Wallet aplikacije.",
   "pre_seed_button_text" : "Razumijem. Prikaži mi moj pristupni izraz",
 
   "xmr_to_error" : "XMR.TO greška",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "Molimo ne zaboravite navesti memo ID prilikom slanja XLM transakcije na razmjenu",
   "xrp_extra_info" : "Molimo ne zaboravite navesti odredišnu oznaku prilikom slanja XRP transakcije na razmjenu",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Ako želite razmijeniti XMR s vlastitog Monero računa na Cake Wallet novčaniku, molimo prvo se prebacite na svoj Monero novčanik.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Ako želite razmijeniti XMR s vlastitog Monero računa na Cool Wallet novčaniku, molimo prvo se prebacite na svoj Monero novčanik.",
   "confirmed" : "Potvrđeno",
   "unconfirmed" : "Nepotvrđeno",
   "displayable" : "Dostupno za prikaz",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Upravljanje Yat",
   "yat_alert_title" : "Lakše šaljite i primajte kriptovalute s Yatom",
-  "yat_alert_content" : "Korisnici Cake Wallet sada mogu slati i primati sve svoje omiljene valute s jedinstvenim korisničkim imenom na temelju emojija.",
+  "yat_alert_content" : "Korisnici Cool Wallet sada mogu slati i primati sve svoje omiljene valute s jedinstvenim korisničkim imenom na temelju emojija.",
   "get_your_yat" : "Uzmi svoj Yat",
   "connect_an_existing_yat" : "Povežite postojeći Yat",
   "yat_address" : "Yat adresa",
@@ -524,11 +524,11 @@
   "yat_error_content" : "Nema adresa povezanih s ovim Yat -om. Pokušajte s drugim Yat -om",
   "choose_address" : "\n\nOdaberite adresu:",
   "yat_popup_title" : "Adresa vašeg novčanika može biti emojificirana.",
-  "yat_popup_content" : "Sada možete slati i primati kriptovalute u Cake Wallet s vašim Yat - kratkim korisničkim imenom zasnovanim na emojijima. Upravljajte Yatsom u bilo kojem trenutku na zaslonu postavki",
+  "yat_popup_content" : "Sada možete slati i primati kriptovalute u Cool Wallet s vašim Yat - kratkim korisničkim imenom zasnovanim na emojijima. Upravljajte Yatsom u bilo kojem trenutku na zaslonu postavki",
   "second_intro_title" : "Jedna adresa emojija koja će svima njima vladati",
   "second_intro_content" : "Vaš Yat jedinstvena je adresa emojija koja zamjenjuje sve vaše duge heksadecimalne adrese za sve vaše valute.",
   "third_intro_title" : "Yat se lijepo igra s drugima",
-  "third_intro_content" : "Yats žive i izvan Cake Wallet -a. Bilo koja adresa novčanika na svijetu može se zamijeniti Yat!",
+  "third_intro_content" : "Yats žive i izvan Cool Wallet -a. Bilo koja adresa novčanika na svijetu može se zamijeniti Yat!",
   "learn_more" : "Saznajte više",
   "search": "Traži",
   "search_language": "Jezik pretraživanja",

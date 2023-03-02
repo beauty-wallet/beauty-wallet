@@ -17,7 +17,9 @@ abstract class AppStoreBase with Store {
       {required this.authenticationStore,
       required this.walletList,
       required this.settingsStore,
-      required this.nodeListStore});
+        required this.nodeListStoreMainnet,
+        required this.nodeListStoreTestnet
+      });
 
   AuthenticationStore authenticationStore;
 
@@ -29,7 +31,8 @@ abstract class AppStoreBase with Store {
 
   SettingsStore settingsStore;
 
-  NodeListStore nodeListStore;
+  NodeListStoreMainnet nodeListStoreMainnet;
+  NodeListStoreTestnet nodeListStoreTestnet;
 
   @action
   void changeCurrentWallet(

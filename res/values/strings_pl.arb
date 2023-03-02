@@ -1,15 +1,15 @@
 {
   "welcome" : "Witamy w",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Świetny portfel na Monero, Bitcoin, Litecoin, i Haven",
   "please_make_selection" : "Wybierz poniżej, aby utworzyć lub przywrócić swój portfel.",
   "create_new" : "Utwórz nowy portfel",
   "restore_wallet" : "Przywróć portfel",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "Konta",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Odzyskaj swój portfel z seedów / kluczy, które zapisałeś w bezpiecznym miejscu",
   "restore_next" : "Kolejny",
   "restore_title_from_backup" : "Przywróć z pliku kopii zapasowej",
-  "restore_description_from_backup" : "Możesz przywrócić całą aplikację Cake Wallet z pliku kopii zapasowej",
+  "restore_description_from_backup" : "Możesz przywrócić całą aplikację Cool Wallet z pliku kopii zapasowej",
   "restore_seed_keys_restore" : "Przywracanie seedów / kluczy",
   "restore_title_from_seed" : "Przywróć z seedów",
   "restore_description_from_seed" : "Przywróć swój portfel z 25 lub 13-słownej frazy seed",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "Nie zapomnij podać dodatkowego identyfikatora (memo) podczas wysyłania transakcji XLM do wymiany",
   "xrp_extra_info" : "Nie zapomnij podać tagu docelowego podczas wysyłania transakcji XRP do wymiany",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Jeśli chcesz wymienić XMR z salda Cake Wallet Monero, najpierw przełącz się na portfel Monero.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Jeśli chcesz wymienić XMR z salda Cool Wallet Monero, najpierw przełącz się na portfel Monero.",
   "confirmed" : "Potwierdzony",
   "unconfirmed" : "Niepotwierdzony",
   "displayable" : "Wyświetlane",
@@ -497,7 +497,7 @@
   "buy_with" : "Kup za pomocą",
   "moonpay_alert_text" : "Wartość kwoty musi być większa lub równa ${minAmount} ${fiatCurrency}",
 
-  "outdated_electrum_wallet_receive_warning": "Jeśli ten portfel ma 12-wyrazowy seed i został utworzony w Cake, NIE Wpłacaj Bitcoina do tego portfela. Wszelkie BTC przeniesione do tego portfela mogą zostać utracone. Utwórz nowy portfel z 24 słowami (dotknij menu w prawym górnym rogu, wybierz Portfele, wybierz Utwórz nowy portfel, a następnie Bitcoin) i NATYCHMIAST przenieś tam swoje BTC. Nowe (24 słowa) portfele BTC Cake Wallet są bezpieczne",
+  "outdated_electrum_wallet_receive_warning": "Jeśli ten portfel ma 12-wyrazowy seed i został utworzony w Cake, NIE Wpłacaj Bitcoina do tego portfela. Wszelkie BTC przeniesione do tego portfela mogą zostać utracone. Utwórz nowy portfel z 24 słowami (dotknij menu w prawym górnym rogu, wybierz Portfele, wybierz Utwórz nowy portfel, a następnie Bitcoin) i NATYCHMIAST przenieś tam swoje BTC. Nowe (24 słowa) portfele BTC Cool Wallet są bezpieczne",
   "do_not_show_me": "Nie pokazuj mi tego ponownie",
 
   "unspent_coins_title" : "Niewydane monety",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Zarządzaj Yats",
   "yat_alert_title" : "Łatwiejsze wysyłanie i odbieranie kryptowalut dzięki Yat",
-  "yat_alert_content" : "Użytkownicy Cake Wallet mogą teraz wysyłać i odbierać wszystkie swoje ulubione waluty za pomocą jedynej w swoim rodzaju nazwy użytkownika opartej na emoji.",
+  "yat_alert_content" : "Użytkownicy Cool Wallet mogą teraz wysyłać i odbierać wszystkie swoje ulubione waluty za pomocą jedynej w swoim rodzaju nazwy użytkownika opartej na emoji.",
   "get_your_yat" : "Zdobądź swój Yat",
   "connect_an_existing_yat" : "Podłącz istniejący Yat",
   "yat_address" : "Adres Yat",
@@ -524,11 +524,11 @@
   "yat_error_content" : "Brak adresów powiązanych z tym Yat. Wypróbuj inny Yat",
   "choose_address" : "\n\nWybierz adres:",
   "yat_popup_title" : "Twój adres portfela może być zemotkowany.",
-  "yat_popup_content" : "Możesz teraz wysyłać i odbierać krypto w Cake Wallet za pomocą swojego Yat – krótkiej nazwy użytkownika opartej na emotikonach. Zarządzaj Yats w dowolnym momencie na ekranie ustawień",
+  "yat_popup_content" : "Możesz teraz wysyłać i odbierać krypto w Cool Wallet za pomocą swojego Yat – krótkiej nazwy użytkownika opartej na emotikonach. Zarządzaj Yats w dowolnym momencie na ekranie ustawień",
   "second_intro_title" : "Jeden adres emoji, aby zarzadzać wszystkimi walutami",
   "second_intro_content" : "Twój Yat to jeden unikalny adres emoji, który zastępuje wszystkie Twoje długie adresy szesnastkowe dla wszystkich Twoich walut.",
   "third_intro_title" : "Yat ładnie bawi się z innymi",
-  "third_intro_content" : "Yats mieszkają również poza Cake Wallet. Każdy adres portfela na ziemi można zastąpić Yat!",
+  "third_intro_content" : "Yats mieszkają również poza Cool Wallet. Każdy adres portfela na ziemi można zastąpić Yat!",
   "learn_more" : "Dowiedz się więcej",
   "search": "Szukaj",
   "search_language": "Wyszukaj język",

@@ -1,15 +1,15 @@
 {
   "welcome" : "Bienvenido",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Impresionante billetera para Monero, Bitcoin, Litecoin, y Haven",
   "please_make_selection" : "Seleccione a continuación para crear o recuperar su billetera.",
   "create_new" : "Crear nueva billetera",
   "restore_wallet" : "Restaurar billetera",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
   
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
 
   "accounts" : "Cuentas",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Recupere su billetera de las semillas/claves que ha guardado en un lugar seguro",
   "restore_next" : "Próximo",
   "restore_title_from_backup" : "Restaurar desde un archivo de respaldo",
-  "restore_description_from_backup" : "Puede restaurar toda la aplicación Cake Wallet desde ysu archivo de respaldo",
+  "restore_description_from_backup" : "Puede restaurar toda la aplicación Cool Wallet desde ysu archivo de respaldo",
   "restore_seed_keys_restore" : "Restauración de semillas / llaves",
   "restore_title_from_seed" : "De la semilla",
   "restore_description_from_seed" : "Restaure su billetera desde el código de combinación de 25 palabras i de 13 palabras",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Espere hasta que su billetera esté sincronizada",
 
   "pre_seed_title" : "IMPORTANTE",
-  "pre_seed_description" : "En la página siguiente verá una serie de ${words} palabras. Esta es su semilla única y privada y es la ÚNICA forma de recuperar su billetera en caso de pérdida o mal funcionamiento. Es SU responsabilidad escribirlo y guardarlo en un lugar seguro fuera de la aplicación Cake Wallet.",
+  "pre_seed_description" : "En la página siguiente verá una serie de ${words} palabras. Esta es su semilla única y privada y es la ÚNICA forma de recuperar su billetera en caso de pérdida o mal funcionamiento. Es SU responsabilidad escribirlo y guardarlo en un lugar seguro fuera de la aplicación Cool Wallet.",
   "pre_seed_button_text" : "Entiendo. Muéstrame mi semilla",
 
   "xmr_to_error" : "Error de XMR.TO",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "No olvide especificar el ID de nota al enviar la transacción XLM para el intercambio",
   "xrp_extra_info" : "No olvide especificar la etiqueta de destino al enviar la transacción XRP para el intercambio",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Si desea intercambiar XMR de su saldo de Cake Wallet Monero, primero cambie a su billetera Monero.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Si desea intercambiar XMR de su saldo de Cool Wallet Monero, primero cambie a su billetera Monero.",
   "confirmed" : "Confirmada",
   "unconfirmed" : "Inconfirmado",
   "displayable" : "Visualizable",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Administrar Yats",
   "yat_alert_title" : "Envíe y reciba criptomonedas más fácilmente con Yat",
-  "yat_alert_content" : "Los usuarios de Cake Wallet ahora pueden enviar y recibir todas sus monedas favoritas con un nombre de usuario único basado en emoji.",
+  "yat_alert_content" : "Los usuarios de Cool Wallet ahora pueden enviar y recibir todas sus monedas favoritas con un nombre de usuario único basado en emoji.",
   "get_your_yat" : "Obtén tu Yat",
   "connect_an_existing_yat" : "Conectar un Yat existente",
   "yat_address" : "Dirección de Yat",
@@ -524,11 +524,11 @@
   "yat_error_content" : "No hay direcciones vinculadas con este Yat. Prueba con otro Yat",
   "choose_address" : "\n\nPor favor elija la dirección:",
   "yat_popup_title" : "La dirección de su billetera se puede emojificar.",
-  "yat_popup_content" : "Ahora puede enviar y recibir criptografía en Cake Wallet con su Yat, un nombre de usuario corto basado en emoji. Administre Yats en cualquier momento en la pantalla de configuración",
+  "yat_popup_content" : "Ahora puede enviar y recibir criptografía en Cool Wallet con su Yat, un nombre de usuario corto basado en emoji. Administre Yats en cualquier momento en la pantalla de configuración",
   "second_intro_title" : "Una dirección de emoji para gobernarlos a todos",
   "second_intro_content" : "Tu Yat es una única dirección emoji única que reemplaza todas tus direcciones hexadecimales largas para todas tus monedas.",
   "third_intro_title" : "Yat juega muy bien con otras",
-  "third_intro_content" : "Los Yats también viven fuera de Cake Wallet. Cualquier dirección de billetera en la tierra se puede reemplazar con un Yat!",
+  "third_intro_content" : "Los Yats también viven fuera de Cool Wallet. Cualquier dirección de billetera en la tierra se puede reemplazar con un Yat!",
   "learn_more" : "Aprende más",
   "search": "Búsqueda",
   "search_language": "Idioma de búsqueda",

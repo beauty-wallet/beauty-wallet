@@ -21,9 +21,9 @@ import 'package:cake_wallet/exchange/trade.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
 import 'package:collection/collection.dart';
 
-const newCakeWalletMoneroUri = 'xmr-node.cakewallet.com:18081';
-const cakeWalletBitcoinElectrumUri = 'electrum.cakewallet.com:50002';
-const cakeWalletLitecoinElectrumUri = 'ltc-electrum.cakewallet.com:50002';
+const newCakeWalletMoneroUri = 'xmr-node.tranoo.com:18081';
+const cakeWalletBitcoinElectrumUri = 'electrum.tranoo.com:50002';
+const cakeWalletLitecoinElectrumUri = 'ltc-electrum.tranoo.com:50002';
 const havenDefaultNodeUri = 'nodes.havenprotocol.org:443';
 
 Future defaultSettingsMigration(
@@ -200,9 +200,9 @@ Future<void> addOnionNode(Box<Node> nodes) async {
 Future<void> replaceNodesMigration({required Box<Node> nodes}) async {
   final replaceNodes = <String, Node>{
     'eu-node.cakewallet.io:18081':
-        Node(uri: 'xmr-node-eu.cakewallet.com:18081', type: WalletType.monero),
+        Node(uri: 'xmr-node-eu.tranoo.com:18081', type: WalletType.monero),
     'node.cakewallet.io:18081': Node(
-        uri: 'xmr-node-usa-east.cakewallet.com:18081', type: WalletType.monero),
+        uri: 'xmr-node-usa-east.tranoo.com:18081', type: WalletType.monero),
     'node.xmr.ru:13666':
         Node(uri: 'node.monero.net:18081', type: WalletType.monero)
   };
@@ -258,10 +258,10 @@ Node? getMoneroDefaultNode({required Box<Node> nodes}) {
   print("getMoneroDefaultNode p2");
   if (timeZone >= 1) {
     // Eurasia
-    nodeUri = 'xmr-node-eu.cakewallet.com:18081';
+    nodeUri = 'xmr-node-eu.tranoo.com:18081';
   } else if (timeZone <= -4) {
     // America
-    nodeUri = 'xmr-node-usa-east.cakewallet.com:18081';
+    nodeUri = 'xmr-node-usa-east.tranoo.com:18081';
   }
   print("getMoneroDefaultNode p3");
 
@@ -272,7 +272,7 @@ Node? getMoneroDefaultNode({required Box<Node> nodes}) {
   try {
     print("getMoneroDefaultNode p4");
     return nodes.values
-        .firstWhere((Node node) => node.uriRaw == nodeUri);
+        .firstWhereOrNull((Node node) => node.uriRaw == nodeUri);
   } catch(e) {
     print('getMoneroDefaultNode ex: ${e.runtimeType.toString()}: ${e.toString()}');
     return nodes.values.first;
@@ -292,7 +292,7 @@ Future<void> changeLitecoinCurrentElectrumServerToDefault(
     {required SharedPreferences sharedPreferences,
     required Box<Node> nodesMainnet}) async {
   final server = getLitecoinDefaultElectrumServer(nodes: nodesMainnet);
-  final serverId = server?.key as int ?? 0;
+  final serverId = server?.key as int? ?? 0;
 
   await sharedPreferences.setInt(PreferencesKey.currentLitecoinElectrumSererIdKey, serverId);
 }
@@ -301,7 +301,7 @@ Future<void> changeHavenCurrentNodeToDefault(
     {required SharedPreferences sharedPreferences,
     required Box<Node> nodesMainnet}) async {
   final node = getHavenDefaultNode(nodes: nodesMainnet);
-  final nodeId = node?.key as int ?? 0;
+  final nodeId = node?.key as int? ?? 0;
 
   await sharedPreferences.setInt(PreferencesKey.currentHavenNodeIdKey, nodeId);
 }
@@ -310,7 +310,7 @@ Future<void> replaceDefaultNode(
     {required SharedPreferences sharedPreferences,
     required Box<Node> nodes}) async {
   const nodesForReplace = <String>[
-    'xmr-node-uk.cakewallet.com:18081',
+    'xmr-node-uk.tranoo.com:18081',
     'eu-node.cakewallet.io:18081',
     'node.cakewallet.io:18081'
   ];
@@ -426,7 +426,7 @@ Future<void> changeTransactionPriorityAndFeeRateKeys(
 
 Future<void> changeDefaultMoneroNode(
     Box<Node> nodeSource, SharedPreferences sharedPreferences) async {
-  const cakeWalletMoneroNodeUriPattern = '.cakewallet.com';
+  const cakeWalletMoneroNodeUriPattern = '.tranoo.com';
   final currentMoneroNodeId =
       sharedPreferences.getInt(PreferencesKey.currentNodeIdKey);
   final currentMoneroNode =
@@ -510,7 +510,7 @@ Future<void> resetBitcoinElectrumServer(
   final currentElectrumSeverId =
       sharedPreferences.getInt(PreferencesKey.currentBitcoinElectrumSererIdKey);
   final oldElectrumServer = nodeSource.values.firstWhereOrNull(
-      (node) => node.uri.toString().contains('electrumx.cakewallet.com'));
+      (node) => node.uri.toString().contains('electrumx.tranoo.com'));
   var cakeWalletNode = nodeSource.values.firstWhereOrNull(
       (node) => node.uriRaw.toString() == cakeWalletBitcoinElectrumUri);
 

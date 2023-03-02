@@ -1,8 +1,8 @@
 name: cw_shared_external
 description: Shared external libraries for monero and haven
 version: 0.0.1
-author: Cake Walelt
-homepage: https://cakewallet.com
+author: Cool Walelt
+homepage: https://github.com/cool-wallet
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

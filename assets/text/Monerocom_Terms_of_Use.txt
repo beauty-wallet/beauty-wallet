@@ -185,4 +185,4 @@ Your Comments and Concerns
 ==========================
 
 	This App is operated by Cake Technologies Inc.
-	All feedback, comments, and other communications relating to the App should be directed to info@cakewallet.com. All requests for technical support should be directed to support@cakewallet.com.
+	All feedback, comments, and other communications relating to the App should be directed to https://tranoo.com/ . All requests for technical support should be directed to https://tranoo.com/ .

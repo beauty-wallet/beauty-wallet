@@ -25,11 +25,11 @@
   },
   {
     "question" : "Was kann ich tun, wenn ich meinen Samen verliere?",
-    "answer" : "Wenn Sie Ihren Samen vergessen haben, haben Sie ihn wahrscheinlich irgendwo aufgeschrieben. Bitte überprüfen Sie Ihre Notizen und schauen Sie sich auf Ihrem Computer um. Wenn Sie es nirgendwo finden, haben Sie möglicherweise Cake Wallet gesichert (in diesem Fall können Sie es aus diesem Backup wiederherstellen.) Wenn keines dieser Probleme auftritt, können wir leider nichts tun.\n"
+    "answer" : "Wenn Sie Ihren Samen vergessen haben, haben Sie ihn wahrscheinlich irgendwo aufgeschrieben. Bitte überprüfen Sie Ihre Notizen und schauen Sie sich auf Ihrem Computer um. Wenn Sie es nirgendwo finden, haben Sie möglicherweise Cool Wallet gesichert (in diesem Fall können Sie es aus diesem Backup wiederherstellen.) Wenn keines dieser Probleme auftritt, können wir leider nichts tun.\n"
   },
   {
     "question" : "Sammeln Sie Informationen zu meiner Brieftasche?",
-    "answer" : "Cake Wallet sammelt oder zeichnet keine Informationen über Ihre Brieftasche auf. Ihre Privatsphäre ist uns wichtig.\n"
+    "answer" : "Cool Wallet sammelt oder zeichnet keine Informationen über Ihre Brieftasche auf. Ihre Privatsphäre ist uns wichtig.\n"
   },
   {
     "question" : "Kann ich eine Transaktion stornieren?",
@@ -52,7 +52,7 @@
     "answer" : "Wenn Sie Probleme mit einem Austausch haben, wenden Sie sich am besten an den Austausch. Wir sind eine Partnerschaft mit XMR.TO, Morph und ChangeNow eingegangen. Rufen Sie daher am besten http://xmr.to, http://changenow.io oder http://morphtoken.com auf und wenden Sie sich an deren Support.\n"
   },
   {
-    "question" : "Wie kontaktiere ich den Cake Wallet-Support?",
-    "answer" : "Senden Sie eine E-Mail an support@cakewallet.com, schließen Sie sich dem Telegramm unter @cakewallet_bot an oder twittern Sie @CakeWalletXMR!\n"
+    "question" : "Wie kontaktiere ich den Cool Wallet-Support?",
+    "answer" : "Senden Sie eine E-Mail an support@tranoo.com, schließen Sie sich dem Telegramm unter @tranoowallet_bot an oder twittern Sie @tranoowallet!\n"
   }
 ]

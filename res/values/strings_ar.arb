@@ -1,15 +1,15 @@
 {
    "welcome":"مرحبا بك في",
-   "cake_wallet":"Cake Wallet",
+   "cake_wallet":"Cool Wallet",
    "first_wallet_text":"محفظة رائعة ل Monero, Bitcoin, Litecoin و Haven",
    "please_make_selection":"يرجى الأختيار لإنشاء أو استعادة محفظتك.",
    "create_new":"إنشاء محفظة جديدة",
    "restore_wallet":"استعادة محفظة",
 
-   "monero_com":"Monero.com بواسطة Cake Wallet",
+   "monero_com":"Monero.com بواسطة Cool Wallet",
    "monero_com_wallet_text":"محفظة رائعة ل Monero",
 
-   "haven_app":"Haven بواسطة Cake Wallet",
+   "haven_app":"Haven بواسطة Cool Wallet",
    "haven_app_wallet_text":"محفظة رائعة ل Haven",
 
    "accounts":"حسابتي",
@@ -163,7 +163,7 @@
    "restore_description_from_seed_keys":"استرجع محفظتك من السييد / المفاتيح التي قمت بحفظها في مكان آمن",
    "restore_next":"التالي",
    "restore_title_from_backup":"استعادة من النسخة الاحتياطية",
-   "restore_description_from_backup":"يمكنك استعادة تطبيق Cake Wallet بالكامل من ملف النسخ الاحتياطي",
+   "restore_description_from_backup":"يمكنك استعادة تطبيق Cool Wallet بالكامل من ملف النسخ الاحتياطي",
    "restore_seed_keys_restore":"استعادة السييد / المفاتيح",
    "restore_title_from_seed":"استعادة من السييد",
    "restore_description_from_seed":"قم باستعادة محفظتك من الرمز المكون من 25 كلمة أو 13 كلمة",
@@ -427,7 +427,7 @@
    "exchange_sync_alert_content":"يرجى الانتظار حتى تتم مزامنة محفظتك",
 
    "pre_seed_title":"مهم",
-   "pre_seed_description":"في الصفحة التالية ستشاهد سلسلة من الكلمات ${words}. هذه هي سييد الفريدة والخاصة بك وهي الطريقة الوحيدة لاسترداد محفظتك في حالة فقدها أو عطلها. تقع على عاتقك مسؤولية تدوينها وتخزينها في مكان آمن خارج تطبيق Cake Wallet.",
+   "pre_seed_description":"في الصفحة التالية ستشاهد سلسلة من الكلمات ${words}. هذه هي سييد الفريدة والخاصة بك وهي الطريقة الوحيدة لاسترداد محفظتك في حالة فقدها أو عطلها. تقع على عاتقك مسؤولية تدوينها وتخزينها في مكان آمن خارج تطبيق Cool Wallet.",
    "pre_seed_button_text":"انا أفهم. أرني سييد الخاص بي",
 
    "xmr_to_error":"خطأ XMR.TO",
@@ -478,7 +478,7 @@
    "xlm_extra_info":"من فضلك لا تنس تحديد معرّف المذكرة أثناء إرسال معاملة XLM للتبادل",
    "xrp_extra_info":"من فضلك لا تنس تحديد علامة الوجهة أثناء إرسال معاملة XRP للتبادل",
 
-   "exchange_incorrect_current_wallet_for_xmr":"إذا كنت ترغب في استبدال XMR من رصيد Cake Wallet Monero ، فيرجى التبديل إلى محفظة Monero أولاً.",
+   "exchange_incorrect_current_wallet_for_xmr":"إذا كنت ترغب في استبدال XMR من رصيد Cool Wallet Monero ، فيرجى التبديل إلى محفظة Monero أولاً.",
    "confirmed":"مؤكد",
    "unconfirmed":"غير مؤكد",
    "displayable":"قابل للعرض",
@@ -513,7 +513,7 @@
 
    "manage_yats":"إدارة Yats",
    "yat_alert_title":"أرسل واستقبل العملات المشفرة بسهولة أكبر مع Yat",
-   "yat_alert_content":"يمكن لمستخدمي Cake Wallet الآن إرسال واستلام جميع عملاتهم المفضلة باستخدام اسم مستخدم فريد من نوعه قائم على الرموز التعبيرية.",
+   "yat_alert_content":"يمكن لمستخدمي Cool Wallet الآن إرسال واستلام جميع عملاتهم المفضلة باستخدام اسم مستخدم فريد من نوعه قائم على الرموز التعبيرية.",
    "get_your_yat":"احصل على Yat",
    "connect_an_existing_yat":"توصيل Yat الحالي",
    "connect_yats":"توصيل Yats",
@@ -524,11 +524,11 @@
    "yat_error_content":"لا توجد عناوين مرتبطة بهذا Yat. جرب يات آخر",
    "choose_address":"\n\nالرجاء اختيار عنوان:",
    "yat_popup_title":"يمكن تحويل عنوان محفظتك إلى رموز تعبيرية.",
-   "yat_popup_content":"يمكنك الآن إرسال واستلام العملات المشفرة في Cake Wallet باستخدام Yat - اسم مستخدم قصير يعتمد على الرموز التعبيرية. إدارة Yats في أي وقت على شاشة الإعدادات",
+   "yat_popup_content":"يمكنك الآن إرسال واستلام العملات المشفرة في Cool Wallet باستخدام Yat - اسم مستخدم قصير يعتمد على الرموز التعبيرية. إدارة Yats في أي وقت على شاشة الإعدادات",
    "second_intro_title":"عنوان تعبيري ايموجي واحد يحكمهم جميعا!",
    "second_intro_content":"Yat الخاص بك هو عنوان تعبيري فريد يحل محل جميع العناوين السداسية العشرية الطويلة لجميع عملاتك.",
    "third_intro_title":"يتماشي Yat بلطف مع الآخرين",
-   "third_intro_content":"يعيش Yats خارج Cake Wallet أيضًا. يمكن استبدال أي عنوان محفظة على وجه الأرض بـ Yat!",
+   "third_intro_content":"يعيش Yats خارج Cool Wallet أيضًا. يمكن استبدال أي عنوان محفظة على وجه الأرض بـ Yat!",
    "learn_more":"اعرف المزيد",
    "search":"بحث",
    "search_language":"ابحث عن لغة",

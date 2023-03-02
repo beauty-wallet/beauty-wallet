@@ -25,11 +25,11 @@
   },
   {
     "question" : "Wat kan ik doen als ik mijn zaad verlies?",
-    "answer" : "Als je je zaad bent vergeten, heb je het waarschijnlijk ergens opgeschreven. Controleer uw aantekeningen en kijk rond op uw computer. Als je het nergens kunt vinden, heb je misschien een back-up gemaakt van Cake Wallet (in welk geval je in staat zou zijn om vanuit die back-up te herstellen.) Als geen van deze werken, kunnen we helaas niets doen.\n"
+    "answer" : "Als je je zaad bent vergeten, heb je het waarschijnlijk ergens opgeschreven. Controleer uw aantekeningen en kijk rond op uw computer. Als je het nergens kunt vinden, heb je misschien een back-up gemaakt van Cool Wallet (in welk geval je in staat zou zijn om vanuit die back-up te herstellen.) Als geen van deze werken, kunnen we helaas niets doen.\n"
   },
   {
     "question" : "Verzamel je informatie over mijn portemonnee?",
-    "answer" : "Cake Wallet verzamelt of registreert GEEN informatie over uw portemonnee. Wij geven om uw privacy.\n"
+    "answer" : "Cool Wallet verzamelt of registreert GEEN informatie over uw portemonnee. Wij geven om uw privacy.\n"
   },
   {
     "question" : "Is het mogelijk om een transactie ongedaan te maken?",
@@ -52,7 +52,7 @@
     "answer" : "Als u problemen ondervindt met een uitwisseling, kunt u het beste contact opnemen met de uitwisseling zelf. We werken samen met XMR.TO, Morph en ChangeNow, dus u kunt het beste naar http://xmr.to, http://changenow.io of http://morphtoken.com gaan en contact opnemen met hun ondersteuning.\n"
   },
   {
-    "question" : "Hoe neem ik contact op met Cake Wallet-ondersteuning?",
-    "answer" : "E-mail support@cakewallet.com, word lid van het Telegram op @cakewallet_bot of tweet @CakeWalletXMR!\n"
+    "question" : "Hoe neem ik contact op met Cool Wallet-ondersteuning?",
+    "answer" : "E-mail support@tranoo.com, word lid van het Telegram op @tranoowallet_bot of tweet @tranoowallet!\n"
   }
 ]

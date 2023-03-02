@@ -1,15 +1,15 @@
 {
   "welcome" : "Bem-vindo ao",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Carteira incrível para Monero, Bitcoin, Litecoin, e Haven",
   "please_make_selection" : "Escolha se quer criar uma carteira nova ou restaurar uma antiga.",
   "create_new" : "Criar nova carteira",
   "restore_wallet" : "Restaurar carteira",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "Contas",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Restaure a sua carteira a partir de sementes/chaves que você salvou em um local seguro",
   "restore_next" : "Próximo",
   "restore_title_from_backup" : "Restaurar a partir de um arquivo de backup",
-  "restore_description_from_backup" : "Você pode restaurar todo o aplicativo Cake Wallet de seu arquivo de backup",
+  "restore_description_from_backup" : "Você pode restaurar todo o aplicativo Cool Wallet de seu arquivo de backup",
   "restore_seed_keys_restore" : "Restauração com sementes/chaves",
   "restore_title_from_seed" : "Restaurar a partir de semente",
   "restore_description_from_seed" : "Restaure sua carteira a partir de semente com 25 palavras ou 13 palavras",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Por favor, espere até que sua carteira seja sincronizada",
 
   "pre_seed_title" : "IMPORTANTE",
-  "pre_seed_description" : "Na próxima página, você verá uma série de ${words} palavras. Esta é a sua semente única e privada e é a ÚNICA maneira de recuperar sua carteira em caso de perda ou mau funcionamento. É SUA responsabilidade anotá-lo e armazená-lo em um local seguro fora do aplicativo Cake Wallet.",
+  "pre_seed_description" : "Na próxima página, você verá uma série de ${words} palavras. Esta é a sua semente única e privada e é a ÚNICA maneira de recuperar sua carteira em caso de perda ou mau funcionamento. É SUA responsabilidade anotá-lo e armazená-lo em um local seguro fora do aplicativo Cool Wallet.",
   "pre_seed_button_text" : "Compreendo. Me mostre minha semente",
 
   "xmr_to_error" : "Erro XMR.TO",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Gerenciar Yats",
   "yat_alert_title" : "Envie e receba criptografia mais facilmente com Yat",
-  "yat_alert_content" : "Os usuários da Cake Wallet agora podem enviar e receber todas as suas moedas favoritas com um nome de usuário baseado em emoji único.",
+  "yat_alert_content" : "Os usuários da Cool Wallet agora podem enviar e receber todas as suas moedas favoritas com um nome de usuário baseado em emoji único.",
   "get_your_yat" : "Pegue seu Yat",
   "connect_an_existing_yat" : "Conecte um Yat existente",
   "yat_address" : "Endereço Yat",
@@ -524,11 +524,11 @@
   "yat_error_content" : "Nenhum endereço vinculado a este Yat. Tente outro Yat",
   "choose_address" : "\n\nEscolha o endereço:",
   "yat_popup_title" : "O endereço da sua carteira pode ser emojificado.",
-  "yat_popup_content" : "Agora você pode enviar e receber criptografia na Cake Wallet com seu Yat - um nome de usuário curto baseado em emoji. Gerenciar Yats a qualquer momento na tela de configurações",
+  "yat_popup_content" : "Agora você pode enviar e receber criptografia na Cool Wallet com seu Yat - um nome de usuário curto baseado em emoji. Gerenciar Yats a qualquer momento na tela de configurações",
   "second_intro_title" : "Um endereço de emoji para governar todos eles",
   "second_intro_content" : "Seu Yat é um endereço de emoji único e exclusivo que substitui todos os seus endereços hexadecimais longos para todas as suas moedas.",
   "third_intro_title" : "Yat joga bem com os outros",
-  "third_intro_content" : "Yats também mora fora da Cake Wallet. Qualquer endereço de carteira na Terra pode ser substituído por um Yat!",
+  "third_intro_content" : "Yats também mora fora da Cool Wallet. Qualquer endereço de carteira na Terra pode ser substituído por um Yat!",
   "learn_more" : "Saber mais",
   "search": "Procurar",
   "search_language": "Idioma de pesquisa",

@@ -1,15 +1,15 @@
 {
   "welcome" : "Benvenuto",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "Portafoglio fantastico per Monero, Bitcoin, Litecoin, e Haven",
   "please_make_selection" : "Gentilmente seleziona se vuoi generare o recuperare il tuo portafoglio.",
   "create_new" : "Genera nuovo Portafoglio",
   "restore_wallet" : "Recupera Portafoglio",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Portafoglio fantastico per Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Portafoglio fantastico per Haven",
   
   "accounts" : "Conti",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "Recupera il tuo portafoglio dal seme/chiavi che hai salvato in un posto sicuro",
   "restore_next" : "Prossimo",
   "restore_title_from_backup" : "Recupera da backup",
-  "restore_description_from_backup" : "Puoi recuperare l'app Cake Wallet per intero dal tuo file di backup",
+  "restore_description_from_backup" : "Puoi recuperare l'app Cool Wallet per intero dal tuo file di backup",
   "restore_seed_keys_restore" : "Recupera Seme/Chiavi",
   "restore_title_from_seed" : "Recupera dal seme",
   "restore_description_from_seed" : "Recupera il tuo portafoglio da una combinazione di 25 o 13 parole",
@@ -427,7 +427,7 @@
   "exchange_sync_alert_content" : "Gentilmente aspetta che il tuo portafoglio sia sincronizzato",
 
   "pre_seed_title" : "IMPORTANTE",
-  "pre_seed_description" : "Nella pagina seguente ti sarà mostrata una serie di parole ${words}. Questo è il tuo seme unico e privato ed è l'UNICO modo per recuperare il tuo portafoglio in caso di perdita o malfunzionamento. E' TUA responsabilità trascriverlo e conservarlo in un posto sicuro fuori dall'app Cake Wallet.",
+  "pre_seed_description" : "Nella pagina seguente ti sarà mostrata una serie di parole ${words}. Questo è il tuo seme unico e privato ed è l'UNICO modo per recuperare il tuo portafoglio in caso di perdita o malfunzionamento. E' TUA responsabilità trascriverlo e conservarlo in un posto sicuro fuori dall'app Cool Wallet.",
   "pre_seed_button_text" : "Ho capito. Mostrami il seme",
 
   "xmr_to_error" : "XMR.TO errore",
@@ -478,7 +478,7 @@
   "xlm_extra_info" : "Gentilmente ricorda di indicare il Memo ID quando invii la transazione XLM per lo scambio",
   "xrp_extra_info" : "Gentilmente ricorda di indicare il Tag di Destinazione quando invii una transazione XRP per lo scambio",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "Se vuoi scambiare XMR dal tuo saldo Cake Wallet Monero, gentilmente passa al tuo portafoglio Monero.",
+  "exchange_incorrect_current_wallet_for_xmr" : "Se vuoi scambiare XMR dal tuo saldo Cool Wallet Monero, gentilmente passa al tuo portafoglio Monero.",
   "confirmed" : "Confermato",
   "unconfirmed" : "Non confermato",
   "displayable" : "Visualizzabile",
@@ -513,7 +513,7 @@
 
   "manage_yats" : "Gestisci gli Yat",
   "yat_alert_title" : "Invia e ricevi criptovalute più facilmente con Yat",
-  "yat_alert_content" : "Gli utenti di Cake Wallet possono ora inviare e ricevere tutte le loro valute preferite con un nome utente unico basato su emoji.",
+  "yat_alert_content" : "Gli utenti di Cool Wallet possono ora inviare e ricevere tutte le loro valute preferite con un nome utente unico basato su emoji.",
   "get_your_yat" : "Ottieni il tuo Yat",
   "connect_an_existing_yat" : "Collegare un Yat esistente",
   "yat_address" : "Indirizzo Yat",
@@ -524,11 +524,11 @@
   "yat_error_content" : "Nessun indirizzo collegato a questo Yat. Prova un altro Yat",
   "choose_address" : "\n\nSi prega di scegliere l'indirizzo:",
   "yat_popup_title" : "L'indirizzo del tuo portafoglio può essere emoji.",
-  "yat_popup_content" : "Ora puoi inviare e ricevere criptovalute in Cake Wallet con il tuo Yat, un breve nome utente basato su emoji. Gestisci Yats in qualsiasi momento nella schermata delle impostazioni",
+  "yat_popup_content" : "Ora puoi inviare e ricevere criptovalute in Cool Wallet con il tuo Yat, un breve nome utente basato su emoji. Gestisci Yats in qualsiasi momento nella schermata delle impostazioni",
   "second_intro_title" : "Un indirizzo emoji per domarli tutti",
   "second_intro_content" : "Il tuo Yat è un unico indirizzo emoji univoco che sostituisce i lunghi indirizzi per tutte le tue valute.",
   "third_intro_title" : "Yat gioca bene con gli altri",
-  "third_intro_content" : "Yat può funzionare anche fuori da Cake Wallet. Qualsiasi indirizzo di portafoglio sulla terra può essere sostituito con uno Yat!",
+  "third_intro_content" : "Yat può funzionare anche fuori da Cool Wallet. Qualsiasi indirizzo di portafoglio sulla terra può essere sostituito con uno Yat!",
   "learn_more" : "Impara di più",
   "search": "Ricerca",
   "search_language": "Cerca lingua",

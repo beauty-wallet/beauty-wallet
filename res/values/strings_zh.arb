@@ -1,15 +1,15 @@
 {
   "welcome" : "欢迎使用",
-  "cake_wallet" : "Cake Wallet",
+  "cake_wallet" : "Cool Wallet",
   "first_wallet_text" : "门罗币、比特币、莱特币和避风港的超棒钱包",
   "please_make_selection" : "请在下面进行选择 创建或恢复您的钱包.",
   "create_new" : "创建新钱包",
   "restore_wallet" : "恢复钱包",
 
-  "monero_com": "Monero.com by Cake Wallet",
+  "monero_com": "Monero.com by Cool Wallet",
   "monero_com_wallet_text": "Awesome wallet for Monero",
 
-  "haven_app": "Haven by Cake Wallet",
+  "haven_app": "Haven by Cool Wallet",
   "haven_app_wallet_text": "Awesome wallet for Haven",
   
   "accounts" : "账户",
@@ -163,7 +163,7 @@
   "restore_description_from_seed_keys" : "从保存到安全地方的种子/钥匙取回钱包",
   "restore_next" : "下一个",
   "restore_title_from_backup" : "从备份文件还原",
-  "restore_description_from_backup" : "您可以从还原整个Cake Wallet应用您的备份文件",
+  "restore_description_from_backup" : "您可以从还原整个Cool Wallet应用您的备份文件",
   "restore_seed_keys_restore" : "种子/密钥还原",
   "restore_title_from_seed" : "从种子还原",
   "restore_description_from_seed" : "从25个字中恢复您的钱包或13个字的组合码",
@@ -426,7 +426,7 @@
   "exchange_sync_alert_content" : "请等待，直到您的钱包同步",
 
   "pre_seed_title" : "重要",
-  "pre_seed_description" : "在下一页上，您将看到${words}个文字。 这是您独有的种子，是丟失或出现故障时恢复钱包的唯一方法。 您有必须将其写下并储存在Cake Wallet应用程序以外的安全地方。",
+  "pre_seed_description" : "在下一页上，您将看到${words}个文字。 这是您独有的种子，是丟失或出现故障时恢复钱包的唯一方法。 您有必须将其写下并储存在Cool Wallet应用程序以外的安全地方。",
   "pre_seed_button_text" : "我明白。 查看种子",
 
   "xmr_to_error" : "XMR.TO 错误",
@@ -477,7 +477,7 @@
   "xlm_extra_info" : "发送用于交换的XLM交易时，请不要忘记指定备忘录ID",
   "xrp_extra_info" : "发送用于交换的XRP交易时，请不要忘记指定目标Tag",
 
-  "exchange_incorrect_current_wallet_for_xmr" : "如果要从Cake Wallet Monero余额中兑换XMR，请先切换到Monero钱包。",
+  "exchange_incorrect_current_wallet_for_xmr" : "如果要从Cool Wallet Monero余额中兑换XMR，请先切换到Monero钱包。",
   "confirmed" : "已确认",
   "unconfirmed" : "未经证实",
   "displayable" : "可显示",
@@ -511,7 +511,7 @@
 
   "manage_yats" : "管理 Yats",
   "yat_alert_title" : "使用 Yat 更輕鬆地發送和接收加密貨幣",
-  "yat_alert_content" : "Cake Wallet 用戶現在可以使用獨一無二的基於表情符號的用戶名發送和接收他們喜歡的所有貨幣。",
+  "yat_alert_content" : "Cool Wallet 用戶現在可以使用獨一無二的基於表情符號的用戶名發送和接收他們喜歡的所有貨幣。",
   "get_your_yat" : "得到你的 Yat",
   "connect_an_existing_yat" : "連接現有 Yat",
   "yat_address" : "Yat 地址",
@@ -522,11 +522,11 @@
   "yat_error_content" : "沒有與此 Yat 相關聯的地址。 嘗試另一個 Yat",
   "choose_address" : "\n\n請選擇地址：",
   "yat_popup_title" : "您的錢包地址可以被表情化。",
-  "yat_popup_content" : "您現在可以使用 Yat 在 Cake Wallet 中發送和接收加密貨幣 - 一個基於表情符號的簡短用戶名。 在設置屏幕上隨時管理 Yats",
+  "yat_popup_content" : "您現在可以使用 Yat 在 Cool Wallet 中發送和接收加密貨幣 - 一個基於表情符號的簡短用戶名。 在設置屏幕上隨時管理 Yats",
   "second_intro_title" : "一個表情符號地址來統治他們",
   "second_intro_content" : "您的 Yat 是一個唯一的表情符號地址，可替換您所有貨幣的所有長十六進制地址。",
   "third_intro_title" : "Yat 和別人玩得很好",
-  "third_intro_content" : "Yats 也住在 Cake Wallet 之外。 地球上任何一個錢包地址都可以用一個Yat來代替！",
+  "third_intro_content" : "Yats 也住在 Cool Wallet 之外。 地球上任何一個錢包地址都可以用一個Yat來代替！",
   "learn_more" : "了解更多",
   "search": "搜索",
   "search_language": "搜索语言",

@@ -24,4 +24,4 @@ If you believe a cryptocurrency purchase was conducted fraudulently, please aler
 
 ### Contact Us
 
-If you believe that there has been an error in processing your payment, please contact us at support@cakewallet.com.
+If you believe that there has been an error in processing your payment, please contact us at support@tranoo.com.

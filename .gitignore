@@ -135,3 +135,4 @@ assets/images/app_logo.png
 /pubspec.lock
 /android/app.properties
 /android/app/src/main/AndroidManifest.xml
+**/local.properties

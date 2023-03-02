@@ -24,13 +24,13 @@ abstract class SupportViewModelBase with Store {
       ),
       LinkListItem(
           title: 'Email',
-          linkTitle: 'support@cakewallet.com',
-          link: 'mailto:support@cakewallet.com'),
+          linkTitle: 'support@tranoo.com',
+          link: 'mailto:support@tranoo.com'),
       if (!isMoneroOnly)
         LinkListItem(
             title: 'Website',
-            linkTitle: 'cakewallet.com',
-            link: 'https://cakewallet.com'),
+            linkTitle: 'tranoo.com',
+            link: 'https://tranoo.com'),
       if (!isMoneroOnly)      
         LinkListItem(
             title: 'GitHub',
@@ -41,8 +41,8 @@ abstract class SupportViewModelBase with Store {
       LinkListItem(
           title: 'Telegram',
           icon: 'assets/images/Telegram.png',
-          linkTitle: '@cakewallet_bot',
-          link: 'https://t.me/cakewallet_bot'),
+          linkTitle: '@tranoowallet_bot',
+          link: 'https://t.me/tranoowallet_bot'),
       LinkListItem(
           title: 'Twitter',
           icon: 'assets/images/Twitter.png',
@@ -84,7 +84,7 @@ abstract class SupportViewModelBase with Store {
       //    link: 'mailto:support@y.at')
   ];
 
-  static const url = 'https://guides.cakewallet.com';
+  static const url = 'https://guides.tranoo.com';
 
   List<SettingsListItem> items;
 }

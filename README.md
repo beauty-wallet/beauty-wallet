@@ -125,7 +125,7 @@ Or you can use another program like GIMP or Photoshop.
 
 ## Add a new fiat currency
 
-1. Check with [Cake Wallet support](https://guides.cakewallet.com) to see if the desired new fiat currency is available
+1. Check with [Cool Wallet support](https://guides.tranoo.com) to see if the desired new fiat currency is available
 through our fiat API. Not all fiat currencies are.
 
 2. If the currency is associated strongly with a specific issuing country, map the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code with the applicable [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) in `lib/entities/fiat_currency.dart`. If the currency is used in a whole region or organization, then map with a reasonable interpretation of this (eg: eur countryCode for EUR symbol).

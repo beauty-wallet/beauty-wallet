@@ -6,10 +6,10 @@ Pod::Spec.new do |s|
   s.name             = 'cw_monero'
   s.version          = '0.0.2'
   s.summary          = 'CW Monero'
-  s.description      = 'Cake Wallet wrapper over Monero project.'
-  s.homepage         = 'http://cakewallet.com'
+  s.description      = 'Cool Wallet wrapper over Monero project.'
+  s.homepage         = 'https://github.com/cool-wallet'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'CakeWallet' => 'support@cakewallet.com' }
+  s.author           = { 'CoolWallet' => 'https://github.com/cool-wallet' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h, Classes/*.h, External/ios/libs/monero/include/External/ios/**/*.h'

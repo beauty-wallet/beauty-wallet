@@ -7,8 +7,9 @@ The following are the system requirements to build BeautyWallet for your Android
 ```
 Ubuntu >= 16.04 
 Android SDK 28
-Android NDK 17c
+Android NDK 23.2.8568313 (the beauty-wallet codebase maybe can be tweaked to use ndk 17c)
 Flutter 2 or above
+yacc (available with 'sudo apt install -y bison')
 ```
 
 ## Building BeautyWallet for Android
@@ -19,12 +20,12 @@ These steps will help you configure and execute a build of BeautyWallet from its
 
 BeautyWallet cannot be built without the following packages installed on your build system.
 
-- curl unzip automake build-essential file pkg-config git python libtool libtinfo5 cmake openjdk-8-jre-headless clang
+- curl unzip automake build-essential file pkg-config git python libtool libtinfo5 cmake openjdk-8-jre-headless clang bison libncurses5
 
 You may easily install them on your build system with the following command:
 
 ```bash
-sudo apt-get install -y curl unzip automake build-essential file pkg-config git python libtool libtinfo5 cmake openjdk-8-jre-headless clang
+sudo apt-get install -y curl unzip automake build-essential file pkg-config git python libtool libtinfo5 cmake openjdk-8-jre-headless clang bison libncurses5
 ```
 
 ### 2. Installing Android Studio and Android toolchain
@@ -69,17 +70,17 @@ followed by a "key password" towards the end of the creation process.
 
 ### 6. Acquiring the BeautyWallet Source Code
 
-Create the directory that will be use to store the BeautyWallet source...
+Create the directory that will be used to store the BeautyWallet source & build folders...
 
 ```bash
-mkdir -pv ~/vcs
-cd ~/vcs
+mkdir -pv ~/vcs/beauty-wallet-umbrella
+cd ~/vcs/beauty-wallet-umbrella
 ```
 
 ..and download the source code into that directory.
 
 ```bash
-git clone https://github.com/beauty-wallet/beauty-wallet.git --branch main
+git clone --recursive https://github.com/beauty-wallet/beauty-wallet.git --branch main
 ```
 
 Proceed into the source code before proceeding with the next steps:
@@ -104,7 +105,7 @@ Please pick what app you want to build: cakewallet or monero.com.
 ```bash
 source ./app_env.sh `echo -n "<cakewallet OR monero.com>"`
 ```
-(it should be like `source ./app_env.sh cakewallet` or `source ./app_env.sh monero.com`)
+(it should be `source ./app_env.sh cakewallet` or `source ./app_env.sh monero.com`)
 
 Then run configuration script for setup app name, app icon etc:
 
@@ -112,7 +113,17 @@ Then run configuration script for setup app name, app icon etc:
 ./app_config.sh
 ```  
 
-Build the Monero libraries and their dependencies:
+Build the latest cmake
+
+```bash
+pushd ~/vcs
+git clone --recursive https://gitlab.kitware.com/cmake/cmake.git
+cd cmake
+./bootstrap && make && sudo make install
+popd 
+```
+
+Build the libraries and their dependencies:
 
 ```bash
 ./build_all.sh
@@ -127,7 +138,7 @@ Now the dependencies need to be copied into the BeautyWallet project with this c
 It is now time to change back to the base directory of the BeautyWallet source code:
 
 ```bash
-cd ../../
+cd ../..
 ```
 
 Install Flutter package dependencies with this command:
@@ -135,6 +146,12 @@ Install Flutter package dependencies with this command:
 ```bash
 flutter pub get
 ```
+
+TO DO FIX THIS: (((
+    The plugin `cw_monero` uses a deprecated version of the Android embedding.
+    To avoid unexpected runtime failures, or future build failures, try to see if this plugin supports the Android V2 embedding. Otherwise, consider removing it since a future release of Flutter will remove these deprecated APIs.
+    If you are plugin author, take a look at the docs for migrating the plugin to the V2 embedding: https://flutter.dev/go/android-plugin-migration.
+)))
 
 Your Beauty Wallet binary will be built with cryptographic salts, which are used for secure encryption
 of your data. You may generate these secret salts with the following command:
